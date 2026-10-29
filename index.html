@@ -115,6 +115,7 @@ iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 .cf .st.ok{color:var(--acc);font-weight:600}.cf .st.er{color:#b42318}
 .cf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media(max-width:760px){.cg{grid-template-columns:1fr}.cf .two2{grid-template-columns:1fr}}
+a.card.lk{display:block;color:inherit;text-decoration:none;transition:border-color .15s}a.card.lk:hover{border-color:var(--acc);text-decoration:none}.pj .th{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 0%;border-radius:10px;margin-bottom:12px;background:var(--bg2)}.pj .go{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--acc)}
 </style>
 </head><body>
 <div id="main">
@@ -149,7 +150,7 @@ iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 <div class="card pj"><span class="pc">GP-27-E-01</span><h3>Title to be announced</h3><span class="tag">2027</span><span class="tag">Evening study</span><span class="tag">In progress</span></div>
 <div class="card pj"><span class="pc">GP-26-M-01</span><h3>Smart Campus</h3><span class="tag">2026</span><span class="tag">Morning study</span></div>
 <div class="card pj"><span class="pc">GP-26-M-02</span><h3>Remote Corrosion</h3><span class="tag">2026</span><span class="tag">Morning study</span></div>
-<div class="card pj"><span class="pc">GP-25-M-01</span><h3>Piezo Footstep</h3><span class="tag">2025</span><span class="tag">Morning study</span></div>
+<a class="card pj lk" href="/projects/gp-25-m-01/"><img class="th" src="/projects/gp-25-m-01/img/hero.jpg" alt="A shoe stepping on the Piezo Footstep plate" width="800" height="1000" loading="lazy" decoding="async"><span class="pc">GP-25-M-01</span><h3>Piezo Footstep</h3><span class="tag">2025</span><span class="tag">Morning study</span><span class="go">Watch the story &rarr;</span></a>
 </div></div></section>
 
 <section id="honors"><div class="w"><h2>Honors</h2><div class="tl" style="margin-top:20px"><div class="it"><div class="y">2024</div><div><h3>Sanggar Sanjung Award – Journal Publication, Student Category</h3><p>Institute of Postgraduate Studies, Universiti Sains Malaysia</p></div></div></div></div></section>
@@ -185,15 +186,6 @@ iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 <footer>© 2026 Dr. Ibrahim Al-Najati · Amarah, Missan, Iraq</footer>
 </div>
 
-<div id="detail"><nav><div class="w"><b>Dr. Ibrahim Al-Najati</b></div></nav><div class="w" style="padding-block:28px 64px"><a class="back" href="#projects">← Back to projects</a>
-<p class="eyebrow">Graduation project · 2026</p><h1 style="font-size:clamp(1.8rem,5vw,2.8rem)">Graduation project title (sample)</h1>
-<p class="sub">Department of Electromechanical Systems Engineering Technology</p><div class="note">Layout demo only. All content here is placeholder.</div>
-<div class="gal"><div>Photo 1</div><div>Photo 2</div><div>Photo 3</div></div>
-<h2 style="font-size:1.2rem">The idea</h2><p>A short, clear paragraph on what the project does and how it works, written for a non-specialist.</p>
-<div class="facts"><div><b>Problem</b>One line</div><div><b>Solution</b>One line</div><div><b>Benefit</b>A number or measured result</div></div>
-<h2 style="font-size:1.2rem">Video</h2><button class="vid" id="vb">▶ Play project video</button><p class="sub" style="margin-top:6px;font-size:.85rem">The video loads only when tapped, so the site stays fast.</p>
-<h2 style="font-size:1.2rem">Team</h2><div class="row"><span class="chip">Student name 1</span><span class="chip">Student name 2</span><span class="chip">Student name 3</span></div>
-<p style="margin-top:14px"><b>Supervisor:</b> Dr. Ibrahim Al-Najati</p></div></div>
 <dialog id="dlg"></dialog>
 <script>
 var P=[
@@ -217,9 +209,8 @@ d.querySelector("#cp").onclick=function(){var b=this;try{navigator.clipboard.wri
 r();d.showModal()}
 document.getElementById("pubs").innerHTML=P.map(function(p,i){return '<div class="pub"><div class="cover">Journal cover</div><div><p class="venue">'+(p.t=="c"?"Conference paper":"Journal article")+" · "+p.y+'</p><h3>'+p.ti+'</h3><div class="au">'+hl(p)+'</div><div class="au"><i>'+p.j+'</i></div><div class="acts"><button class="chip" onclick="cite('+i+')">Cite</button><a class="chip" href="https://doi.org/'+p.d+'">DOI</a><span class="chip off">PDF · pending</span></div></div></div>'}).join("");
 document.getElementById("pubs").querySelectorAll(".cover").forEach(function(c,i){c.textContent=P[i].t=="c"?"Proceedings":"Journal cover"});
-function route(){var pr=location.hash=="#project";document.getElementById("main").style.display=pr?"none":"block";document.getElementById("detail").style.display=pr?"block":"none";if(pr)scrollTo(0,0);else if(location.hash.length>1){var e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView()}}
+function route(){if(location.hash.length>1){var e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView()}}
 addEventListener("hashchange",route);route();
-document.getElementById("vb").onclick=function(){this.outerHTML='<iframe class="vid" loading="lazy" src="https://www.youtube-nocookie.com/embed/VIDEO_ID?autoplay=1" allowfullscreen style="border:0"></iframe>'};
 var links=[].slice.call(document.querySelectorAll("nav a"));
 if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+({publications:"research",lectures:"teaching"}[e.target.id]||e.target.id))})}})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)})}
 var box=document.getElementById("lecs");
