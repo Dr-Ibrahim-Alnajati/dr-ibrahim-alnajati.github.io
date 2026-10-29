@@ -1,0 +1,473 @@
+{
+ "playlists": [
+  {
+   "id": "PL4KpK0XeF70QWXmdCnYTvrN_lJBEZYxrl",
+   "title": "Engineering Materials",
+   "sub": "First stage · Electromechanical Engineering Technologies",
+   "kind": "course",
+   "videos": [
+    {
+     "id": "utseorEX32s",
+     "title": "Lecture 1 · Evening"
+    },
+    {
+     "id": "YuFxvEjWCpQ",
+     "title": "Lecture 1 · Morning"
+    },
+    {
+     "id": "fZhiz9l4_ls",
+     "title": "Lecture 2 · Evening"
+    },
+    {
+     "id": "z6wEd1Nu15s",
+     "title": "Lecture 2 · Morning"
+    },
+    {
+     "id": "gEIvn5PEpwo",
+     "title": "Lecture 3 · Evening"
+    },
+    {
+     "id": "aSNjId97Kyw",
+     "title": "Lecture 3 · Morning"
+    },
+    {
+     "id": "fTa_l-n2XTM",
+     "title": "Lecture 4 · Evening"
+    },
+    {
+     "id": "gmE_GMCoAn4",
+     "title": "Lecture 4 · Morning"
+    },
+    {
+     "id": "lVOHn0qOhxs",
+     "title": "Lecture 5 · Evening"
+    },
+    {
+     "id": "k7zZ4QeMMfM",
+     "title": "Lecture 5 · Morning"
+    },
+    {
+     "id": "0QCLkzyDvcc",
+     "title": "Lecture 6 · Evening"
+    },
+    {
+     "id": "0LIt6BlyBSE",
+     "title": "Lecture 6 · Morning"
+    },
+    {
+     "id": "nE4sQQ8j0f4",
+     "title": "Lecture 7 · Evening"
+    },
+    {
+     "id": "dNiExaJce98",
+     "title": "Lecture 7 · Morning"
+    },
+    {
+     "id": "lLD7tzxgdjY",
+     "title": "Lecture 8 · Evening"
+    },
+    {
+     "id": "YrrNaU-39Xk",
+     "title": "Lecture 9 · Evening"
+    },
+    {
+     "id": "hJqEI2e6exo",
+     "title": "شرح مخططات الأطوار وقاعدة العتلة لسبيكة (Ni-Cu) باستخدام الذكاء الاصطناعي"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70TTdv8is9bY-JTEv-B7svFM",
+   "title": "Electromechanical Design",
+   "sub": "Third stage · Electromechanical Engineering Technologies",
+   "kind": "course",
+   "videos": [
+    {
+     "id": "eRqgFbhqgmE",
+     "title": "Lecture 1 · Evening"
+    },
+    {
+     "id": "k1Kb-wiue28",
+     "title": "Lecture 1 · Morning"
+    },
+    {
+     "id": "NrK5bryUFfc",
+     "title": "Lecture 2 · Evening"
+    },
+    {
+     "id": "2IKMyYxgSBw",
+     "title": "Lecture 2 · Morning"
+    },
+    {
+     "id": "OnhXKYz7JmA",
+     "title": "Lecture 3 · Evening"
+    },
+    {
+     "id": "BDk-tF_xUTI",
+     "title": "Lecture 3 · Morning"
+    },
+    {
+     "id": "xCtliTP2tZo",
+     "title": "Lecture 4 · Morning & Evening"
+    },
+    {
+     "id": "9pS_W_YtQWs",
+     "title": "Lecture 5 · Evening"
+    },
+    {
+     "id": "Wh15qSjySZU",
+     "title": "Lecture 5 · Morning"
+    },
+    {
+     "id": "DyN_dWI6KaQ",
+     "title": "Lecture 6 · Evening"
+    },
+    {
+     "id": "DhBx8DLUrAs",
+     "title": "Lecture 6 · Morning"
+    },
+    {
+     "id": "TECm9Iqcht0",
+     "title": "Lecture 7 · Evening"
+    },
+    {
+     "id": "Ui0073gj0d8",
+     "title": "Lecture 7 · Morning"
+    },
+    {
+     "id": "_j5ve4UkJ40",
+     "title": "Lecture 8 · Morning"
+    },
+    {
+     "id": "wX0_frXq5LU",
+     "title": "Lecture 9 · Morning"
+    },
+    {
+     "id": "4lO-1aT0hPE",
+     "title": "Gears Explanation"
+    }
+   ]
+  },
+  {
+   "id": "PLf-_vzJ-6YCk",
+   "title": "Renewable Energy (STUMETC475)",
+   "sub": "Fourth stage · Electromechanical Engineering Technologies",
+   "kind": "course",
+   "videos": [
+    {
+     "id": "QN9O3cJjK2E",
+     "title": "المحاضرة الأولى: مقدمة في الطاقة المتجددة | Renewable Energy Course - Lecture 1"
+    },
+    {
+     "id": "bxlrBMc1_Ts",
+     "title": "المحاضرة الثانية: مصادر الطاقة المتجددة وحسابات القدرة والتكلفة| Renewable Energy Course - Lecture 2"
+    },
+    {
+     "id": "ZmNEV90Dvyc",
+     "title": "المحاضرة الثالثة: فيزياء الخلية الشمسية: من الفوتون للكهرباء| Renewable Energy Course - Lecture 3"
+    },
+    {
+     "id": "clZgsKyviRE",
+     "title": "المحاضرة الرابعة: النمذجة الكهربائية وتتبع نقطة القدرة | Renewable Energy Course - Lecture 4"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70Qgfbsj3i8pyfpgx02PoZPP",
+   "title": "COMSOL Multiphysics",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "46WQ_j06Kw4",
+     "title": "شرح اعداد وتشغيل برنامج الكومسول للمحاكاة الهندسية المتقدمة"
+    },
+    {
+     "id": "J3v-lgJRxP4",
+     "title": "COMSOL Video 2 | رسم البلوك وتثبيت القاعدة | Geometry Setup & Constraints"
+    },
+    {
+     "id": "EEmV3qlcLMU",
+     "title": "COMSOL Video 1 | COMSOL Learning Center for Researchers | شرح موقع تعلم الكومسول للباحثين"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70RiHiImwXKejhIMGbeGtYW3",
+   "title": "Tire Strain Piezo Harvesters",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "yis_v6wFF1k",
+     "title": "Piezo harvester | Lab test 3"
+    },
+    {
+     "id": "t2gZL5pR6Lc",
+     "title": "Piezo harvester | Lab test 2"
+    },
+    {
+     "id": "-8YXIDxblO8",
+     "title": "Piezo harvester | Lab test 1"
+    },
+    {
+     "id": "WaKBohcaC-4",
+     "title": "Tire Assembly with piezo harvesters installed 2"
+    },
+    {
+     "id": "6ZDyu0mJ9Rw",
+     "title": "Tire Assembly with piezo harvesters installed 1"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70SpYCBdWrQiggup1YYgWjSa",
+   "title": "الورش والدورات التدريبية | الكلية التقنية الهندسية ميسان",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "aDCq1EBEA7Q",
+     "title": "الطاقة المتجددة تطبيقات وانظمة متكاملة | د.ابراهيم علي | الكلية التقنية الهندسية ميسان"
+    },
+    {
+     "id": "VidrM1T7_yY",
+     "title": "ربط البحث العلمي بأهداف التخطيط الاستراتيجي في الجامعات | الكلية التقنية الهندسية ميسان"
+    },
+    {
+     "id": "mZNxP7BIFyc",
+     "title": "Thermal Management in the AI Era: Challenges, Innovations,and Future Directions| Dr. Chuah Lee Siang"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70RrvxJbBtXbuNkhFFdlepA6",
+   "title": "رحلة الباحث من الفكرة الى النشر",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "W7ZVrhtklPk",
+     "title": "رحلة الباحث من الفكرة الى النشر: 1. اختيار الفكرة البحثية- ورشة برعاية جامعة ذي قار"
+    },
+    {
+     "id": "DJbpLnarHBA",
+     "title": "رحلة الباحث من الفكرة الى النشر: 2. المراجعة المنهجية"
+    },
+    {
+     "id": "ZIZqnYrmds0",
+     "title": "رحلة الباحث من الفكرة الى النشر: 3. هيكل الورقة البحثية"
+    },
+    {
+     "id": "EXxjyZCX-Q8",
+     "title": "رحلة الباحث من الفكرة الى النشر: 4. قراءة وفهم الورقة البحثية باستخدام ادوات الذكاء الاصطناعي"
+    },
+    {
+     "id": "FaepUVr7tfQ",
+     "title": "رحلة الباحث من الفكرة الى النشر: 5. اختيار المجلة المناسبة للنشر وتجنب المجلات المفترسة"
+    },
+    {
+     "id": "TTxj3rC-GUk",
+     "title": "رحلة الباحث من الفكرة الى النشر: 6. آخر التحديثات في قاعدة بيانات Scopus"
+    },
+    {
+     "id": "O1WS7USYsWo",
+     "title": "رحلة الباحث من الفكرة الى النشر: 7. مراجعة الادبيات الببليومترية Bibliometrics Review"
+    },
+    {
+     "id": "Tn8zsYCiy9s",
+     "title": "رحلة الباحث من الفكرة الى النشر: 8. كيفية البحث في قواعد البيانات الحديثة scopus و clarivate"
+    },
+    {
+     "id": "ZEdTxKYKXss",
+     "title": "تعليمات الترقيات لسنة ٢٠٢٥ خاص بلجان الترقيات"
+    },
+    {
+     "id": "ZwHkB0C5puo",
+     "title": "من التحدي إلى التصدي | دليل التدريسي لتحويل مشكلات الواقع العراقي إلى بحوث ومشاريع تخرج ذات أثر"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70SowF-BJCLAbrs41wj7OqPY",
+   "title": "Study Abroad | الدراسة بالخارج",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "8W6HEcU_yxk",
+     "title": ""
+    },
+    {
+     "id": "B0jUWkC8t_I",
+     "title": "USM Fees Payment 2025 | طريقة دفع اجور الطالب لجامعة العلوم الماليزية"
+    },
+    {
+     "id": "nHIfBmIKoQY",
+     "title": "How to Study Abroad 2022-Part 1"
+    },
+    {
+     "id": "_n2qL_CNZ1M",
+     "title": "How to Study Abroad 2022-Part 2"
+    },
+    {
+     "id": "iNdwQuNCAEA",
+     "title": "How to Study Abroad 2022-Part 3"
+    },
+    {
+     "id": "t--ZWK6k75g",
+     "title": "موقع منظومة البعثات العراقية | الزمالات الدراسية | 2025 | د. ابراهيم علي"
+    },
+    {
+     "id": "CLNddr5yV3Q",
+     "title": "دليل الجامعات الموصى بها للدراسة خارج العراق 2025"
+    },
+    {
+     "id": "bxFUQDcKtjk",
+     "title": "بعثات اللجنة العليا لتطوير التعليم بالعراق 2026"
+    },
+    {
+     "id": "lVlqLFamXkI",
+     "title": "منحة الداد الالمانية ٢٠٢٦| DAAD Scholarships 2026"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70RzS-MneDK0YtpnIAEpshJh",
+   "title": "EDAS Masterclass",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "OSS2z73T1yI",
+     "title": "EDAS Masterclass 1 (2021) شرح موقع ايداس الخاص بالمؤتمرات العلمية ٢٠٢١"
+    },
+    {
+     "id": "pKOIEL7pMHc",
+     "title": "EDAS Masterclass 2 (2021) شرح موقع ايداس الخاص بالمؤتمرات العلمية ٢٠٢١"
+    },
+    {
+     "id": "6UrbeMHCuVA",
+     "title": "EDAS Masterclass 3"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70TBYhFYZt1z16sbAKZ8JCP4",
+   "title": "شروحات الحاسوب",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "zzSK8-YwqgM",
+     "title": "كيف تسجل محاضراتك من خلال تسجيل شاشة حاسوبك الماك بوك بدون برنامج"
+    },
+    {
+     "id": "UWsUiMNoaPQ",
+     "title": "كيف تسجل شاشة حاسوبك الويندوز بطريقة بسيطة ولا تحتاج خبرة في استخدام الحاسوب"
+    },
+    {
+     "id": "EBbfJs0hlT0",
+     "title": "انكليزي اول متوسط المنهج الجديد بونت 1 الدرس 1 زمن الماضي البسيط - انشاء عن العطلة - حل النشاط"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70RNAGg_k0QdEBp-VFfhDnCo",
+   "title": "Research Method",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "mZNxP7BIFyc",
+     "title": "Thermal Management in the AI Era: Challenges, Innovations,and Future Directions| Dr. Chuah Lee Siang"
+    },
+    {
+     "id": "E05ygm6KzVQ",
+     "title": "Viva ALNAJATI IBRAHIM ALI HAMEED 20240625"
+    },
+    {
+     "id": "5ZVq_zxAUGU",
+     "title": "Critical Thinking and Reading a Scientific Paper"
+    },
+    {
+     "id": "Q6bxnwHGrO8",
+     "title": "Open Access Publication"
+    },
+    {
+     "id": "LcWqePkw-h4",
+     "title": "Mendely Webinar 4 May 2020"
+    },
+    {
+     "id": "zLXpk59iOgY",
+     "title": "Publication Stratigies 21 May"
+    },
+    {
+     "id": "peTrxxOJ0DE",
+     "title": "Google Scholar"
+    },
+    {
+     "id": "Z_-5aWpER28",
+     "title": "USM Library Search Tips"
+    },
+    {
+     "id": "izAISO27gaQ",
+     "title": "Researcher Profile"
+    },
+    {
+     "id": "VytlF5LPQOs",
+     "title": "How to search in USM library"
+    },
+    {
+     "id": "3Z01lNSbT7g",
+     "title": "Outsourcing data for research"
+    },
+    {
+     "id": "ZKs-ppV9y5o",
+     "title": "How Q1 journal evaluate your paper"
+    },
+    {
+     "id": "YPtxaYnZx4M",
+     "title": "حلول العزل الحراري في العراق: كفاءة البلوك المعزول بالبولسترين في مدينة العمارة"
+    },
+    {
+     "id": "WCGnfimgTLg",
+     "title": "Al-Najati; Viva Slides 15-5-2024"
+    },
+    {
+     "id": "TY-FLyocwWg",
+     "title": "كتابة البحث العلمي الرصين وآلية النشر العلمي في المجلات العلمية العالمية يقيمها ا.د. خالد حسيني"
+    },
+    {
+     "id": "FQ6AP2w6XLg",
+     "title": "ترتيب بحث المشروع للمرحلة الرابعة"
+    },
+    {
+     "id": "NghsOujpomI",
+     "title": "Tips to Write a Good Literature Review (2021)"
+    },
+    {
+     "id": "NghsOujpomI",
+     "title": "Tips to Write a Good Literature Review (2021)"
+    },
+    {
+     "id": "YAgIsFuJXmM",
+     "title": "Outsourcing Data for Research"
+    },
+    {
+     "id": "EYzdWzme54g",
+     "title": "محاضرة في عناصر دوائر السيطرة الهوائية لمنظومات التبريد- ج1- م.م. ابراهيم علي حميد النجاتي"
+    },
+    {
+     "id": "oq6zXBdfz6Y",
+     "title": ""
+    },
+    {
+     "id": "qd0Anj0QrWU",
+     "title": ""
+    }
+   ]
+  }
+ ],
+ "updated": "2026-10-29T11:42:05Z"
+}
