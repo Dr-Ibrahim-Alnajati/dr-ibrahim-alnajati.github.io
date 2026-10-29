@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piezo Footstep (GP-25-M-01) | Dr. Ibrahim Al-Najati</title>
+<meta name="description" content="Piezo Footstep: a graduation project that turns footsteps into electricity with 25 piezoelectric discs and powers a self-sustained IoT weather station. Supervised by Dr. Ibrahim Al-Najati, Missan Engineering Technical College.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Ibrahim Al-Najati">
+<meta property="og:title" content="Piezo Footstep: footsteps power a self-sustained weather station">
+<meta property="og:description" content="25 piezoelectric discs turn walking into electricity for an IoT weather station. A graduation project from Missan Engineering Technical College, Southern Technical University, Iraq.">
+<meta property="og:url" content="https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/">
+<meta property="og:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A shoe stepping on the Piezo Footstep plate, with the control unit beside it">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Piezo Footstep: footsteps power a self-sustained weather station">
+<meta name="twitter:description" content="25 piezoelectric discs turn walking into electricity for an IoT weather station.">
+<meta name="twitter:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/img/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Piezo Footstep: Energy Harvesting for IoT, a Self-Sustained Weather Station Powered by Footsteps","alternateName":"GP-25-M-01","description":"A final-year graduation project that harvests energy from footsteps with 25 piezoelectric discs to power an ESP32-based IoT weather station.","url":"https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/","image":"https://dr-ibrahim-alnajati.github.io/projects/gp-25-m-01/img/og.jpg","inLanguage":"en","contributor":{"@id":"https://dr-ibrahim-alnajati.github.io/#person"},"isPartOf":{"@type":"WebSite","name":"Dr. Ibrahim Al-Najati","url":"https://dr-ibrahim-alnajati.github.io/"}}</script>
+<style>
+:root{--bg:#fff;--bg2:#f6f7f9;--ink:#14213d;--mut:#5f6b7a;--line:#e4e7ec;--acc:#0f766e;--accbg:#e6f4f2;--r:14px;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+.w{max-width:1040px;margin-inline:auto;padding-inline:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .w::-webkit-scrollbar{display:none}
+nav b{white-space:nowrap;margin-inline-end:14px;font-weight:700}nav b a{color:var(--ink)}
+nav a{white-space:nowrap;color:var(--mut);font-size:.9rem;font-weight:500;padding:.3rem .7rem;border-radius:999px}
+nav a:hover{text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;border-radius:10px;padding:.6rem 1.1rem;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn:hover{text-decoration:none;filter:brightness(.97)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:0 0 10px}
+
+/* hero */
+.hero{padding-block:clamp(32px,7vw,72px) clamp(24px,4vw,40px)}
+.hero .w{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,48px);align-items:center}
+h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;font-weight:800;text-wrap:balance}
+.lead{font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--mut);max-width:30em;margin:0 0 22px}
+.lead b{color:var(--ink)}
+.hp{aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(20,33,61,.45)}
+.hp img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-block:8px clamp(32px,6vw,56px)}
+.stats div{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stats b{display:block;font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;color:var(--acc);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats span{display:block;color:var(--mut);font-size:.85rem;line-height:1.35;margin-top:4px}
+
+/* story timeline */
+.story{list-style:none;margin:0;padding:0}
+.st{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 clamp(14px,3vw,28px)}
+.rail{position:relative}
+.rail::after{content:"";position:absolute;left:50%;top:52px;bottom:0;width:2px;transform:translateX(-50%);background:linear-gradient(var(--acc),var(--line))}
+.st:last-child .rail::after{display:none}
+.node{width:44px;height:44px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem;font-variant-numeric:tabular-nums;box-shadow:0 0 0 6px var(--accbg)}
+.sb{padding-bottom:clamp(44px,8vw,84px);min-width:0}
+.kick{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:10px 0 6px}
+.sb h2{font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.12;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.sb p{margin:0 0 14px;max-width:40em;color:#2b3a55}
+.sb p.m{color:var(--mut);font-size:.92rem}
+figure{margin:0}
+figcaption{font-size:.82rem;color:var(--mut);margin-top:6px;line-height:1.4}
+.fig img{border-radius:12px;border:1px solid var(--line);width:100%}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-block:18px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-block:18px}
+.g2 .fig img,.g3 .fig img{aspect-ratio:4/3;object-fit:cover}
+.wide{margin-block:18px}
+.with-v{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(18px,4vw,36px);align-items:center;margin-block:18px}
+.vid{position:relative;display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:16px;overflow:hidden;background:#0e1a33 center/cover no-repeat;cursor:pointer;padding:0;font:inherit;color:#fff;box-shadow:0 14px 34px -20px rgba(20,33,61,.6)}
+.vid::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,20,40,.7))}
+.vid i{position:absolute;left:50%;top:48%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center}
+.vid i::after{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--acc)}
+.vid span{position:absolute;left:14px;right:14px;bottom:12px;text-align:start;font-weight:600;font-size:.92rem;line-height:1.3}
+.vid:hover i{transform:scale(1.06)}
+iframe.vid{border:0}
+.vtxt h3{margin:0 0 6px;font-size:1.05rem}.vtxt p{font-size:.95rem}
+.pv{font-size:.76rem;color:#7a5b10;background:#fff7e6;border:1px solid #f3dfae;border-radius:8px;padding:6px 10px;margin-top:8px}
+
+/* chart */
+.chart{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px 12px;margin-block:18px}
+.chart h3{margin:0 0 2px;font-size:1rem}.chart p.m{margin:0 0 8px}
+.lg{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:.82rem;font-weight:600;color:var(--acc)}
+.lg i{width:26px;border-top:2px dashed var(--acc)}
+.bc i,.bc em{font-style:normal}
+.bc .plot{position:relative;height:clamp(190px,40vw,250px);margin-left:38px}
+.bc .gl{position:absolute;left:0;right:0;height:0;border-top:1px solid var(--line)}
+.bc .gl b{position:absolute;right:calc(100% + 8px);top:-.7em;font-size:.78rem;font-weight:500;color:var(--mut);white-space:nowrap}
+.bc .th{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--acc);z-index:2}
+.bc .cols{position:absolute;inset:0;display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px)}
+.bc .c{flex:1;display:flex;align-items:flex-end;justify-content:center;min-width:0}
+.bc em{display:block;position:relative;width:min(96px,100%);background:var(--acc);border-radius:6px 6px 0 0}
+.bc em.lo{background:#5eaaa3}
+.bc em b{position:absolute;left:50%;bottom:100%;transform:translateX(-50%);padding-bottom:4px;font-size:clamp(.95rem,3.4vw,1.25rem);font-weight:800;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bc .xl{display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px);margin:8px 0 0 38px}
+.bc .xl span{flex:1;text-align:center;font-size:.85rem;color:var(--mut)}
+.facts2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:18px}
+.facts2 div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.facts2.col{grid-template-columns:1fr;margin-block:0}.facts2 b{display:block;font-size:1.02rem}.facts2 span{display:block;color:var(--mut);font-size:.88rem;line-height:1.45;margin-top:2px}
+
+/* product */
+.uses{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px;max-width:40em}
+.uses li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:500;color:#2b3a55}
+.road{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:8px}
+.road div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.road div.done{border-color:var(--acc);background:var(--accbg)}
+.road em{font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.road .done em{color:var(--acc)}
+.road b{display:block;margin:4px 0 2px}.road span{display:block;font-size:.88rem;color:var(--mut);line-height:1.45}
+
+/* support */
+.support{background:var(--ink);color:#fff;padding-block:clamp(44px,8vw,80px)}
+.support h2{font-size:clamp(1.7rem,4.5vw,2.7rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.support p{color:#c3cad6;max-width:38em;margin:0 0 18px}
+.asks{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.asks li{border:1px solid #3c4a66;border-radius:var(--r);padding:14px 16px;color:#e8ecf3}
+.asks b{display:block;color:#fff;margin-bottom:2px}
+.support .btn{background:transparent;border-color:#3c4a66;color:#fff}.support .btn.p{background:#fff;border-color:#fff;color:var(--ink)}
+
+.proj-meta{padding-block:clamp(28px,5vw,44px)}
+.proj-meta h2{font-size:1.1rem;margin:0 0 12px}
+.proj-meta dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 24px;margin:0}
+.proj-meta dt{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.proj-meta dd{margin:0 0 6px;font-weight:500}
+footer{background:var(--ink);color:#8b97ab;font-size:.82rem;padding-block:20px;text-align:center;border-top:1px solid #243252}
+
+@media(max-width:760px){
+.hero .w{grid-template-columns:1fr}.hp{max-width:340px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.st{grid-template-columns:36px minmax(0,1fr)}.node{width:34px;height:34px;font-size:.8rem;box-shadow:0 0 0 4px var(--accbg)}.rail::after{top:42px}
+.g2,.g3{grid-template-columns:1fr 1fr}.g3 .fig:last-child{grid-column:1/-1}
+.with-v{grid-template-columns:1fr}.with-v .vbox{max-width:260px}
+.facts2,.road,.asks{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.vid:hover i{transform:none}}
+</style></head><body>
+<nav><div class="w"><b><a href="/">Dr. Ibrahim Al-Najati</a></b><a href="/#projects">&larr; All projects</a><a href="#proof">Results</a><a href="#support">Support</a><a href="/#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="w">
+<div>
+<p class="eyebrow">GP-25-M-01 · Graduation project · 2025</p>
+<h1>Piezo Footstep</h1>
+<p class="lead"><b>Every step charges a battery.</b> Twenty-five piezoelectric discs turn walking into electricity and run a wireless weather station, with no mains supply.</p>
+<div class="row"><a class="btn p" href="#proof">See it working</a><a class="btn" href="#support">Support this project</a></div>
+</div>
+<div class="hp"><img src="img/hero.jpg" alt="A shoe stepping on the Piezo Footstep plate, with the control unit and a phone showing live readings beside it" width="800" height="1000" fetchpriority="high" decoding="async"></div>
+</div></header>
+
+<div class="w"><div class="stats" aria-label="Key figures">
+<div><b>25</b><span>piezoelectric discs, 41 mm each</span></div>
+<div><b>7 V</b><span>after 40 presses at 30 kg</span></div>
+<div><b>2 h</b><span>continuous run with a steady 5 V supply</span></div>
+<div><b>±0.5 °C</b><span>sensor accuracy against a reference</span></div>
+</div></div>
+
+<main class="w"><ol class="story">
+
+<li class="st"><div class="rail"><div class="node">01</div></div><div class="sb">
+<p class="kick">The problem</p>
+<h2>Sensors need power. Many places have none.</h2>
+<p>Weather and environmental sensors are often installed where there is no mains supply. They run on batteries that someone has to replace, or on cables that cost money to lay.</p>
+<p>Meanwhile a busy walkway, a school corridor or a building entrance turns thousands of footsteps into nothing.</p>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">02</div></div><div class="sb">
+<p class="kick">The idea</p>
+<h2>Turn every step into electricity.</h2>
+<p>A piezoelectric disc produces a voltage when it is bent. The team placed 25 of them under a spring-loaded plate. Each press flexes the discs by a few millimetres, and the electricity they produce is stored and used to run a small IoT weather station.</p>
+<div class="g2">
+<figure class="fig"><img src="img/discs.jpg" alt="A bag of sixty 41 mm piezoelectric discs with red and black wires" width="900" height="675" loading="lazy" decoding="async"><figcaption>The 41 mm piezoelectric discs used in the plate.</figcaption></figure>
+<figure class="fig"><img src="img/caliper.jpg" alt="A vernier caliper measuring a piezoelectric disc" width="900" height="675" loading="lazy" decoding="async"><figcaption>Every part was measured before it went into the design.</figcaption></figure>
+</div>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">03</div></div><div class="sb">
+<p class="kick">The build</p>
+<h2>Five layers. One shaft. Twenty-five discs.</h2>
+<p><b>Mechanics.</b> Five acrylic layers hold the discs in place. A central shaft with bearings keeps the plate moving straight up and down, and springs push it back after every step.</p>
+<figure class="fig wide"><img src="img/layers.jpg" alt="Side view of the five layers of the plate, numbered 1 to 5 from the bottom" width="1200" height="548" loading="lazy" decoding="async"><figcaption>The five layers: 1 base, 2 support, 3 piezo slots, 4 securing layer, 5 top plate with 2.5 mm protrusions that press on the discs.</figcaption></figure>
+<p><b>Electronics.</b> The discs are wired in five groups of five, parallel inside each group and the groups in series, and rectified with KM310 bridge rectifiers. A 2200 µF capacitor smooths the output and charges two 3.7 V lithium cells. A step-up converter supplies 5 V to an ESP32, which reads a DHT22 temperature and humidity sensor and a voltage sensor, shows the values on a 16×2 LCD and sends them to a phone through the Blynk app.</p>
+<div class="g3">
+<figure class="fig"><img src="img/array.jpg" alt="The array of piezoelectric discs on a yellow board during assembly" width="720" height="960" loading="lazy" decoding="async"><figcaption>The 25-disc array during assembly.</figcaption></figure>
+<figure class="fig"><img src="img/rectifier.jpg" alt="A board carrying 25 bridge rectifiers in a five by five grid" width="640" height="1139" loading="lazy" decoding="async"><figcaption>Rectifier board with 25 KM310 bridges.</figcaption></figure>
+<figure class="fig"><img src="img/wiring.jpg" alt="Soldered wiring on the back of the rectifier board" width="1000" height="562" loading="lazy" decoding="async"><figcaption>Soldered wiring behind the board.</figcaption></figure>
+</div>
+<figure class="fig wide"><img src="img/blocks.jpg" alt="System diagram: piezo array and rectifiers, battery, step-up converter, ESP32 with DHT22 sensor, voltage sensor and LCD" width="1200" height="628" loading="lazy" decoding="async"><figcaption>System diagram: piezo array and rectifiers, lithium battery, step-up converter, ESP32 with DHT22, voltage sensor and LCD.</figcaption></figure>
+<div class="with-v">
+<div class="vtxt"><h3>Watch a disc go in</h3><p>A 39-second close-up of fitting a piezoelectric disc onto the acrylic layer.</p></div>
+<div class="vbox"><button class="vid" data-yt="nMEoDEFLIEY" data-title="Piezo Footstep: mounting a piezoelectric disc" style="background-image:url(img/poster-build.jpg)" aria-label="Play video: mounting a piezoelectric disc"><i></i><span>Mounting a disc · 0:39</span></button></div>
+</div>
+<div class="with-v">
+<div class="vtxt"><h3>Full assembly</h3><p>The complete build in 2 minutes 52 seconds: placing the piezoelectric discs on the plate and routing the wiring.</p></div>
+<div class="vbox"><button class="vid" data-yt="CH9PyrBnciE" data-title="Piezo Footstep: assembly and wiring" style="background-image:url(img/poster-assembly.jpg)" aria-label="Play video: assembly and wiring of the Piezo Footstep plate"><i></i><span>Assembly and wiring · 2:52</span></button></div>
+</div>
+</div></li>
+
+<li class="st" id="proof"><div class="rail"><div class="node">04</div></div><div class="sb">
+<p class="kick">The proof</p>
+<h2>Step on it. Watch the numbers move.</h2>
+<div class="with-v">
+<div class="vtxt"><h3>Live test, 55 seconds</h3><p>A person steps on the plate. The unit's LCD and the phone app show voltage, temperature and humidity in real time.</p><p class="m">Capacitor voltage in the load tests was measured with a Hantek 6204BD oscilloscope.</p></div>
+<div class="vbox"><button class="vid" data-yt="xAOIFeBxksQ" data-title="Piezo Footstep: live test" style="background-image:url(img/poster-demo.jpg)" aria-label="Play video: live test of the Piezo Footstep plate"><i></i><span>Live test · 0:55</span></button></div>
+</div>
+
+<div class="chart" role="group" aria-label="Chart of capacitor voltage after 40 presses at 15, 20 and 30 kg">
+<h3>More weight, more voltage</h3>
+<p class="m">Capacitor voltage after 40 presses, one press per second.</p>
+<p class="lg"><i></i>3.7 V battery voltage</p>
+<div class="bc" role="img" aria-label="Bar chart: 15 kg gives 3.8 volts, 20 kg gives 4.8 volts, 30 kg gives 7.0 volts. A dashed line marks the 3.7 volt battery level.">
+<div class="plot">
+<i class="gl" style="bottom:0"><b>0</b></i><i class="gl" style="bottom:25%"><b>2</b></i><i class="gl" style="bottom:50%"><b>4</b></i><i class="gl" style="bottom:75%"><b>6</b></i><i class="gl" style="bottom:100%"><b>8 V</b></i>
+<i class="th" style="bottom:46.25%"></i>
+<div class="cols"><div class="c"><em class="lo" style="height:47.5%"><b>3.8 V</b></em></div><div class="c"><em class="lo" style="height:60%"><b>4.8 V</b></em></div><div class="c"><em style="height:87.5%"><b>7.0 V</b></em></div></div>
+</div>
+<div class="xl"><span>15 kg</span><span>20 kg</span><span>30 kg</span></div>
+</div>
+</div>
+
+<div class="with-v">
+<div class="facts2 col">
+<div><b>Stable for 2 hours</b><span>Run continuously under 15, 20 and 30 kg loads, the ESP32 supply stayed at about 5 V with no interruptions.</span></div>
+<div><b>Accurate readings</b><span>DHT22 readings stayed within ±0.5 °C and ±2 % humidity of reference instruments.</span></div>
+<div><b>Wireless by design</b><span>Voltage, temperature and humidity reach a phone through Wi-Fi and the Blynk app.</span></div>
+</div>
+<figure class="fig vbox"><img src="img/unit.jpg" alt="The control unit with an LCD showing voltage, temperature and humidity, and a phone beside it showing the same values in an app" width="800" height="985" loading="lazy" decoding="async"><figcaption>The unit's LCD and the phone app show the same live values.</figcaption></figure>
+</div>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">05</div></div><div class="sb">
+<p class="kick">From project to product</p>
+<h2>Where this could work.</h2>
+<ul class="uses">
+<li>Busy walkways, school corridors and shopping-centre entrances</li>
+<li>Self-powered IoT sensors: weather, occupancy, smart flooring</li>
+<li>Emergency and isolated sites where mains power is not available</li>
+</ul>
+<p class="m" style="margin-top:20px">Where the project stands, and what comes next:</p>
+<div class="road">
+<div class="done"><em>Done</em><b>Lab prototype</b><span>Built, wired and tested with 15, 20 and 30 kg loads.</span></div>
+<div><em>Next</em><b>Field pilot</b><span>Weather-sealed plates in a real walkway, measuring the energy delivered per step.</span></div>
+<div><em>Later</em><b>Product version</b><span>Supercapacitor storage, long-range data links such as LoRa, and a dedicated mobile app.</span></div>
+</div>
+</div></li>
+
+</ol></main>
+
+<section class="support" id="support"><div class="w">
+<p class="eyebrow" style="color:#7fd4ca">Support this project</p>
+<h2>Help take it from the lab to the walkway.</h2>
+<p>This prototype was built by final-year students under academic supervision. We are looking for partners who want to see it tested and developed further.</p>
+<ul class="asks">
+<li><b>A pilot site</b>A school, mall or public walkway to host a field trial.</li>
+<li><b>Funding</b>For a weather-sealed, durable plate and proper energy measurement.</li>
+<li><b>An industry partner</b>To help turn the design into a manufacturable product.</li>
+</ul>
+<div class="row"><a class="btn p" href="/#contact">Contact Dr. Ibrahim</a><a class="btn" href="/#projects">See other graduation projects</a></div>
+</div></section>
+
+<section class="proj-meta"><div class="w"><h2>Project details</h2>
+<dl>
+<div><dt>Title</dt><dd>Energy Harvesting for IoT: A Self-Sustained Weather Station Powered by Footsteps</dd></div>
+<div><dt>Code</dt><dd>GP-25-M-01 (graduation project, 2025, morning study, group 01)</dd></div>
+<div><dt>Academic year</dt><dd>2024/2025</dd></div>
+<div><dt>Supervisor</dt><dd>Dr. Ibrahim Ali Hameed Al-Najati</dd></div>
+<div><dt>Department</dt><dd>Electromechanical Systems Engineering Technology</dd></div>
+<div><dt>Institution</dt><dd>Missan Engineering Technical College, Southern Technical University, Iraq</dd></div>
+</dl></div></section>
+
+<footer>&copy; Dr. Ibrahim Ali Hameed Al-Najati · <a href="/" style="color:#c3cad6">dr-ibrahim-alnajati.github.io</a></footer>
+
+<script>
+document.querySelectorAll("button.vid").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-yt");if(!id)return;var f=document.createElement("iframe");f.className="vid";f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1";f.title=b.getAttribute("data-title");f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;b.replaceWith(f)})});
+</script>
+</body></html>
