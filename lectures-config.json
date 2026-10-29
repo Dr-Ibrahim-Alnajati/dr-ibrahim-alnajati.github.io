@@ -4,21 +4,21 @@
   "playlists": {
     "PL4KpK0XeF70QWXmdCnYTvrN_lJBEZYxrl": {
       "title": "Engineering Materials",
-      "sub": "First stage · Electromechanical Engineering Technologies",
+      "sub": "First stage · Electromechanical Systems Engineering Technology",
       "kind": "course",
       "sort": "number",
       "strip": ["Eng_Materials_"]
     },
     "PL4KpK0XeF70TTdv8is9bY-JTEv-B7svFM": {
       "title": "Electromechanical Design",
-      "sub": "Third stage · Electromechanical Engineering Technologies",
+      "sub": "Third stage · Electromechanical Systems Engineering Technology",
       "kind": "course",
       "sort": "number",
       "strip": ["ElecMech_Design_"]
     },
     "PLf-_vzJ-6YCk": {
       "title": "Renewable Energy (STUMETC475)",
-      "sub": "Fourth stage · Electromechanical Engineering Technologies",
+      "sub": "Fourth stage · Electromechanical Systems Engineering Technology",
       "kind": "course",
       "sort": "number"
     }
