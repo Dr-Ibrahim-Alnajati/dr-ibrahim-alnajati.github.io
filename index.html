@@ -76,6 +76,25 @@ pre{background:var(--bg2);border-radius:10px;padding:12px;overflow:auto;font-siz
 .lec img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--bg2)}
 .lec span{display:block;padding:8px 10px;font-size:.85rem;font-weight:600}
 iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
+
+.cg{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(24px,5vw,52px);align-items:start}
+.cf{background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(18px,3vw,28px);display:grid;gap:14px}
+.cf .two2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf label{display:grid;gap:5px;font-size:.88rem;font-weight:600;min-width:0}
+.cf input,.cf select,.cf textarea{font:inherit;font-size:1rem;font-weight:400;color:var(--ink);background:#fff;border:1px solid #c9d0da;border-radius:10px;padding:.6rem .75rem;width:100%;min-width:0}
+.cf textarea{min-height:140px;resize:vertical}
+.cf input[type=file]{padding:.5rem}
+.cf input:focus,.cf select:focus,.cf textarea:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:var(--acc)}
+.cf small{color:var(--mut);font-weight:400}
+.cf .hint{margin:0;font-size:.82rem;color:var(--mut)}
+.cf .fl{margin:0;padding:0;list-style:none;font-size:.85rem;color:var(--mut)}
+.cf .fl:empty{display:none}
+.contact .cf .btn.p{background:var(--acc);border-color:var(--acc);color:#fff;font:inherit;font-weight:600;cursor:pointer;justify-self:start}
+.cf .btn:disabled{opacity:.6;cursor:wait}
+.cf .st{margin:0;min-height:1.4em;font-size:.92rem;color:var(--ink)}
+.cf .st.ok{color:var(--acc);font-weight:600}.cf .st.er{color:#b42318}
+.cf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:760px){.cg{grid-template-columns:1fr}.cf .two2{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div id="main">
@@ -122,9 +141,21 @@ iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 
 <section id="lectures"><div class="w"><h2>Lectures</h2><p class="sub">Recorded lectures, workshops and tutorials from my YouTube channel, grouped by playlist. The list updates automatically. A video loads only when you press it.</p><div id="lecs"></div></div></section>
 
-<section id="contact" class="contact"><div class="w"><h2>Contact</h2><p class="sub">Students and researchers are welcome to get in touch about teaching, projects and collaboration.</p>
+<section id="contact" class="contact"><div class="w"><div class="cg"><div><h2>Contact</h2><p class="sub">Students and researchers are welcome to get in touch about teaching, projects and collaboration.</p>
 <p style="font-size:1.1rem;margin:0 0 16px">ibrahim.hameed@stu.edu.iq</p>
-<div class="row"><a class="btn" href="https://scholar.google.com/citations?user=ilFlAhUAAAAJ&hl=en">Google Scholar</a><a class="btn" href="https://www.researchgate.net/profile/Ibrahim-Al-Najati">ResearchGate</a><a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57222659125">Scopus</a><a class="btn" href="https://www.linkedin.com/in/al-najati/">LinkedIn</a><a class="btn" href="https://www.youtube.com/@One2Billion">YouTube</a></div></div></section>
+<div class="row"><a class="btn" href="https://scholar.google.com/citations?user=ilFlAhUAAAAJ&hl=en">Google Scholar</a><a class="btn" href="https://www.researchgate.net/profile/Ibrahim-Al-Najati">ResearchGate</a><a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57222659125">Scopus</a><a class="btn" href="https://www.linkedin.com/in/al-najati/">LinkedIn</a><a class="btn" href="https://www.youtube.com/@One2Billion">YouTube</a></div></div><form class="cf" id="cf" aria-label="Contact form">
+<div class="two2"><label>Full name *<input name="name" autocomplete="name" required maxlength="100"></label>
+<label>Your email *<input name="email" type="email" autocomplete="email" required maxlength="150"></label></div>
+<div class="two2"><label>Topic<select name="topic"><option value="">Choose a topic</option><option>Engineering Materials (first stage)</option><option>Electromechanical Design (third stage)</option><option>Renewable Energy (fourth stage)</option><option>Graduation project</option><option>Research or collaboration</option><option>Other</option></select></label>
+<label>Subject <small>(optional)</small><input name="subject" maxlength="120"></label></div>
+<label>Message *<textarea name="message" required minlength="10" maxlength="5000" rows="6"></textarea></label>
+<label>Attach files <small>(optional)</small><input type="file" id="cff" multiple></label>
+<ul class="fl" id="cfl"></ul>
+<p class="hint">Up to 3 files, 8 MB in total: PDF, Word, Excel, PowerPoint, images, ZIP and common engineering files. Your details are used only to reply to you.</p>
+<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<button class="btn p" type="submit">Send message</button>
+<p class="st" id="cfs" role="status" aria-live="polite"></p>
+</form></div></div></section>
 <footer>© 2026 Dr. Ibrahim Al-Najati · Amarah, Maysan, Iraq</footer>
 </div>
 
@@ -170,5 +201,36 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;
 function grp(p){return '<details class="co"><summary><b dir="auto">'+esc(p.title)+'</b><span dir="auto">'+esc(p.sub||p.videos.length+" videos")+'</span></summary><div class="lg">'+p.videos.map(function(v){return '<button class="lec" data-id="'+esc(v.id)+'"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/'+esc(v.id)+'/mqdefault.jpg"><span dir="auto">'+esc(v.title)+'</span></button>'}).join("")+'</div></details>'}
 fetch("lectures.json").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){var h="";[["course","Course lectures"],["other","Workshops, tutorials and talks"]].forEach(function(k){var ps=d.playlists.filter(function(p){return p.kind===k[0]});if(ps.length)h+='<h3 class="gh" style="margin:22px 0 12px">'+k[1]+'</h3>'+ps.map(grp).join("")});box.innerHTML=h||'<p class="sub">No videos yet.</p>'}).catch(function(){box.innerHTML='<p class="sub">The video list could not be loaded. Please see my <a href="https://www.youtube.com/@One2Billion">YouTube channel</a>.</p>'});
 document.getElementById("lecs").addEventListener("click",function(e){var b=e.target.closest("button.lec");if(!b)return;var f=document.createElement("iframe");f.className="lec";f.loading="lazy";f.allowFullscreen=true;f.title=b.textContent;f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1";b.replaceWith(f)});
+</script>
+<script>
+(function(){
+var URL_="https://script.google.com/macros/s/AKfycbxfH8qVql64-swPOjpWbOmtwn3bFNvfUhx_jWbyMsVztEvv-L61yfHLQkpXbpjYxVBO/exec";
+var f=document.getElementById("cf");if(!f)return;
+var st=document.getElementById("cfs"),fi=document.getElementById("cff"),fl=document.getElementById("cfl"),btn=f.querySelector("button");
+var t0=Date.now(),busy=false,MAXN=3,MAXB=8*1024*1024;
+var EXT=/\.(pdf|docx?|xlsx?|xlsm|pptx?|txt|csv|rtf|odt|ods|odp|zip|rar|7z|png|jpe?g|gif|webp|heic|mp3|m4a|wav|mp4|mov|py|m|mlx|ipynb|ino|c|cpp|h|java|json|xml|mph|slx|sldprt|sldasm|slddrw|step|stp|stl|dwg|dxf)$/i;
+var ERR={too_fast:"That was very quick. Please check your message and press Send again.",invalid:"Please check your name, email and message (at least 10 characters).",too_many_files:"Please attach at most 3 files.",file_type:"One of the files is not an accepted type.",too_big:"The files are too large (limit 8 MB in total).",limit:"You have reached today's limit of messages. Please try again tomorrow or email me directly.",busy:"The form is very busy today. Please email me directly.",server:"Something went wrong. Please try again, or email me directly."};
+function say(m,c){st.textContent=m;st.className="st"+(c?" "+c:"")}
+function kb(n){return n<1048576?Math.max(1,Math.round(n/1024))+" KB":(n/1048576).toFixed(1)+" MB"}
+function check(){var a=Array.prototype.slice.call(fi.files),tot=0,i;
+if(a.length>MAXN)return "Please attach at most "+MAXN+" files.";
+for(i=0;i<a.length;i++){if(!EXT.test(a[i].name))return "“"+a[i].name+"” is not an accepted file type. Please send a PDF, Office file, image or ZIP.";tot+=a[i].size}
+if(tot>MAXB)return "The files total "+kb(tot)+". The limit is 8 MB, so please compress them or send a link.";
+return ""}
+function rd(file){return new Promise(function(ok,no){var r=new FileReader();r.onload=function(){var s=String(r.result);ok({name:file.name,type:file.type||"",data:s.slice(s.indexOf(",")+1)})};r.onerror=function(){no(new Error("read"))};r.readAsDataURL(file)})}
+fi.addEventListener("change",function(){fl.textContent="";var e=check();if(e){say(e,"er");fi.value="";return}say("");Array.prototype.forEach.call(fi.files,function(x){var li=document.createElement("li");li.textContent=x.name+" · "+kb(x.size);fl.appendChild(li)})});
+f.addEventListener("submit",function(ev){ev.preventDefault();if(busy)return;
+var e=check();if(e){say(e,"er");return}
+var fd=new FormData(f),mail=String(fd.get("email")||"").trim();
+busy=true;btn.disabled=true;say("Sending… files can take a little while.");
+Promise.all(Array.prototype.slice.call(fi.files).map(rd)).then(function(files){
+var p={name:fd.get("name"),email:mail,topic:fd.get("topic"),subject:fd.get("subject"),message:fd.get("message"),website:fd.get("website"),elapsed:Date.now()-t0,files:files};
+return fetch(URL_,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(p)})
+}).then(function(r){return r.json()}).then(function(j){
+if(j&&j.ok){f.reset();fl.textContent="";say("Thank you. Your message has been sent and I will reply to "+mail+".","ok")}
+else say(ERR[j&&j.error]||ERR.server,"er")
+}).catch(function(){say("The message could not be sent. Please check your connection or email me at ibrahim.hameed@stu.edu.iq.","er")}).then(function(){busy=false;btn.disabled=false})
+});
+})();
 </script>
 </body></html>
