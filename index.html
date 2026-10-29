@@ -79,7 +79,7 @@ iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 </style>
 </head><body>
 <div id="main">
-<nav><div class="w"><b>Dr. Ibrahim Al-Najati</b><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Student projects</a><a href="#teaching">Teaching</a><a href="#lectures">Lectures</a><a href="#honors">Honors</a><a href="#background">Education &amp; service</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="w"><b>Dr. Ibrahim Al-Najati</b><a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#teaching">Teaching</a><a href="#honors">Honors</a><a href="#background">Education</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero" id="top"><div class="w"><div>
 <p class="eyebrow">Mechanical Engineering · Energy</p>
@@ -164,7 +164,7 @@ function route(){var pr=location.hash=="#project";document.getElementById("main"
 addEventListener("hashchange",route);route();
 document.getElementById("vb").onclick=function(){this.outerHTML='<iframe class="vid" loading="lazy" src="https://www.youtube-nocookie.com/embed/VIDEO_ID?autoplay=1" allowfullscreen style="border:0"></iframe>'};
 var links=[].slice.call(document.querySelectorAll("nav a"));
-if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)})}
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+({publications:"research",lectures:"teaching"}[e.target.id]||e.target.id))})}})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)})}
 var C=[
 {n:"Engineering Materials",s:"First stage · Electromechanical Engineering Technologies",g:[["Morning study",[["Lecture 1","YuFxvEjWCpQ"],["Lecture 2","z6wEd1Nu15s"],["Lecture 3","aSNjId97Kyw"],["Lecture 4","gmE_GMCoAn4"],["Lecture 5","k7zZ4QeMMfM"],["Lecture 6","0LIt6BlyBSE"],["Lecture 7","dNiExaJce98"]]],["Evening study",[["Lecture 1","utseorEX32s"],["Lecture 2","fZhiz9l4_ls"],["Lecture 3","gEIvn5PEpwo"],["Lecture 4","fTa_l-n2XTM"],["Lecture 5","lVOHn0qOhxs"],["Lecture 6","0QCLkzyDvcc"],["Lecture 7","nE4sQQ8j0f4"],["Lecture 8","lLD7tzxgdjY"],["Lecture 9","YrrNaU-39Xk"]]]]},
 {n:"Electromechanical Design",s:"Third stage · Electromechanical Engineering Technologies",g:[["Morning study",[["Lecture 1","k1Kb-wiue28"],["Lecture 2","2IKMyYxgSBw"],["Lecture 3","BDk-tF_xUTI"],["Lecture 5","Wh15qSjySZU"],["Lecture 6","DhBx8DLUrAs"],["Lecture 7","Ui0073gj0d8"],["Lecture 8","_j5ve4UkJ40"],["Lecture 9","wX0_frXq5LU"]]],["Evening study",[["Lecture 1","eRqgFbhqgmE"],["Lecture 2","NrK5bryUFfc"],["Lecture 3","OnhXKYz7JmA"],["Lecture 5","9pS_W_YtQWs"],["Lecture 6","DyN_dWI6KaQ"],["Lecture 7","TECm9Iqcht0"]]],["Morning and evening together",[["Lecture 4","xCtliTP2tZo"],["Gears explanation","4lO-1aT0hPE"]]]]},
