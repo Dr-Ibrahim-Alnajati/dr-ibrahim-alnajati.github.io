@@ -66,10 +66,20 @@ dialog::backdrop{background:rgba(20,33,61,.5)}
 pre{background:var(--bg2);border-radius:10px;padding:12px;overflow:auto;font-size:.8rem;white-space:pre-wrap;word-break:break-word}
 .tabs{display:flex;gap:8px;margin-bottom:10px}.tabs .chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
 @media(max-width:760px){.hero .w,.two{grid-template-columns:1fr}.photo{max-width:260px}.pub{grid-template-columns:1fr}.cover{display:none}.tl .it{grid-template-columns:1fr;gap:2px}}
+.co{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;padding:0 16px}
+.co summary{cursor:pointer;padding:16px 0;display:flex;flex-direction:column;gap:2px;list-style:none}
+.co summary::-webkit-details-marker{display:none}
+.co summary b{font-size:1.05rem}.co summary span{color:var(--mut);font-size:.88rem}
+.gh{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:6px 0 10px}
+.lg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;padding-bottom:16px}
+.lec{font:inherit;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0;cursor:pointer;overflow:hidden;text-align:start;color:var(--ink)}
+.lec img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--bg2)}
+.lec span{display:block;padding:8px 10px;font-size:.85rem;font-weight:600}
+iframe.lec{grid-column:span 2;aspect-ratio:16/9;width:100%;border:0}
 </style>
 </head><body>
 <div id="main">
-<nav><div class="w"><b>Dr. Ibrahim Al-Najati</b><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Student projects</a><a href="#teaching">Teaching</a><a href="#honors">Honors</a><a href="#background">Education &amp; service</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="w"><b>Dr. Ibrahim Al-Najati</b><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Student projects</a><a href="#teaching">Teaching</a><a href="#lectures">Lectures</a><a href="#honors">Honors</a><a href="#background">Education &amp; service</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero" id="top"><div class="w"><div>
 <p class="eyebrow">Mechanical Engineering · Energy</p>
@@ -101,6 +111,8 @@ pre{background:var(--bg2);border-radius:10px;padding:12px;overflow:auto;font-siz
 <div class="it"><div class="y">Course</div><div><h3>Renewable Energy (STUMETC475)</h3><p>Department of Electromechanical Engineering Technologies</p></div></div>
 <div class="it"><div class="y">Year 1</div><div><h3>Engineering Materials; Pneumatic Control Circuit Elements</h3></div></div>
 <div class="it"><div class="y">Year 4</div><div><h3>Graduation Project supervision</h3></div></div></div></div></section>
+
+<section id="lectures"><div class="w"><h2>Lectures</h2><p class="sub">Recorded lectures for my courses in the Department of Electromechanical Engineering Technologies. A video loads only when you press it.</p><div id="lecs"></div></div></section>
 
 <section id="honors" class="alt"><div class="w"><h2>Honors</h2><div class="tl" style="margin-top:20px"><div class="it"><div class="y">2024</div><div><h3>Sanggar Sanjung Award – Journal Publication, Student Category</h3><p>Institute of Postgraduate Studies, Universiti Sains Malaysia</p></div></div></div></div></section>
 
@@ -153,5 +165,11 @@ addEventListener("hashchange",route);route();
 document.getElementById("vb").onclick=function(){this.outerHTML='<iframe class="vid" loading="lazy" src="https://www.youtube-nocookie.com/embed/VIDEO_ID?autoplay=1" allowfullscreen style="border:0"></iframe>'};
 var links=[].slice.call(document.querySelectorAll("nav a"));
 if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)})}
+var C=[
+{n:"Engineering Materials",s:"First stage · Electromechanical Engineering Technologies",g:[["Morning study",[["Lecture 1","YuFxvEjWCpQ"],["Lecture 2","z6wEd1Nu15s"],["Lecture 3","aSNjId97Kyw"],["Lecture 4","gmE_GMCoAn4"],["Lecture 5","k7zZ4QeMMfM"],["Lecture 6","0LIt6BlyBSE"],["Lecture 7","dNiExaJce98"]]],["Evening study",[["Lecture 1","utseorEX32s"],["Lecture 2","fZhiz9l4_ls"],["Lecture 3","gEIvn5PEpwo"],["Lecture 4","fTa_l-n2XTM"],["Lecture 5","lVOHn0qOhxs"],["Lecture 6","0QCLkzyDvcc"],["Lecture 7","nE4sQQ8j0f4"],["Lecture 8","lLD7tzxgdjY"],["Lecture 9","YrrNaU-39Xk"]]]]},
+{n:"Electromechanical Design",s:"Third stage · Electromechanical Engineering Technologies",g:[["Morning study",[["Lecture 1","k1Kb-wiue28"],["Lecture 2","2IKMyYxgSBw"],["Lecture 3","BDk-tF_xUTI"],["Lecture 5","Wh15qSjySZU"],["Lecture 6","DhBx8DLUrAs"],["Lecture 7","Ui0073gj0d8"],["Lecture 8","_j5ve4UkJ40"],["Lecture 9","wX0_frXq5LU"]]],["Evening study",[["Lecture 1","eRqgFbhqgmE"],["Lecture 2","NrK5bryUFfc"],["Lecture 3","OnhXKYz7JmA"],["Lecture 5","9pS_W_YtQWs"],["Lecture 6","DyN_dWI6KaQ"],["Lecture 7","TECm9Iqcht0"]]],["Morning and evening together",[["Lecture 4","xCtliTP2tZo"],["Gears explanation","4lO-1aT0hPE"]]]]},
+{n:"Renewable Energy (STUMETC475)",s:"Fourth stage · Electromechanical Engineering Technologies",g:[["Lectures",[["1 · Introduction to renewable energy","QN9O3cJjK2E"],["2 · Sources, power and cost calculations","bxlrBMc1_Ts"],["3 · Solar cell physics: from photon to electricity","ZmNEV90Dvyc"],["4 · Electrical modelling and maximum power point tracking","clZgsKyviRE"]]]]}];
+document.getElementById("lecs").innerHTML=C.map(function(c){return '<details class="co"><summary><b>'+c.n+'</b><span>'+c.s+'</span></summary>'+c.g.map(function(g){return '<h3 class="gh">'+g[0]+'</h3><div class="lg">'+g[1].map(function(l){return '<button class="lec" data-id="'+l[1]+'"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/'+l[1]+'/mqdefault.jpg"><span>'+l[0]+'</span></button>'}).join("")+'</div>'}).join("")+'</details>'}).join("");
+document.getElementById("lecs").addEventListener("click",function(e){var b=e.target.closest("button.lec");if(!b)return;var f=document.createElement("iframe");f.className="lec";f.loading="lazy";f.allowFullscreen=true;f.title=b.textContent;f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1";b.replaceWith(f)});
 </script>
 </body></html>
