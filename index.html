@@ -1,68 +1,157 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>د. ابراهيم النجاتي | Dr. Ibrahim Al-Najati</title>
-<meta name="description" content="Dr. Ibrahim Ali Hameed Al-Najati - Lecturer, Southern Technical University, Iraq. Energy, piezoelectric harvesting, teaching.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@600;700&display=swap">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Dr. Ibrahim Al-Najati - Lecturer, Southern Technical University, Maysan. Piezoelectric energy harvesting, pavement and tire-strain energy.">
+<title>Dr. Ibrahim Al-Najati</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d2430;--muted:#5b6575;--rule:#d9d6cc;--accent:#1f4e79;--card:#f1efe8;--btn:#1f4e79;--btnfg:#fff;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181f;--fg:#e6e9ee;--muted:#9aa4b2;--rule:#2b3340;--accent:#8fb8e0;--card:#1c222c;--btn:#8fb8e0;--btnfg:#10151c;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#14181f;--fg:#e6e9ee;--muted:#9aa4b2;--rule:#2b3340;--accent:#8fb8e0;--card:#1c222c;--btn:#8fb8e0;--btnfg:#10151c;color-scheme:dark}
-body{background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.8;padding-inline:16px;padding-block:28px}
-.w{max-width:760px;margin-inline:auto}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
-.top button{font:inherit;background:none;border:1px solid var(--rule);color:var(--fg);border-radius:999px;padding:.15rem .9rem;cursor:pointer}
-h1{font-family:"Noto Naskh Arabic","IBM Plex Sans Arabic",serif;font-size:2.2rem;line-height:1.3;margin:1.5rem 0 .2rem;text-wrap:balance}
-.role{color:var(--muted);margin:0}
-h2{font-size:1rem;color:var(--accent);margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--rule)}
-.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
-.links a{display:block;padding:.55rem .9rem;border-radius:8px;background:var(--card);color:var(--fg);text-decoration:none;border:1px solid var(--rule)}
-.links a.p{background:var(--btn);color:var(--btnfg);border-color:var(--btn);font-weight:600}
-.mail{direction:ltr;unicode-bidi:isolate;display:inline-block}
-[data-l]{display:none}
-html[lang="ar"] [data-l="ar"],html[lang="en"] [data-l="en"]{display:revert}
-html[lang="ar"] .links [data-l="ar"],html[lang="en"] .links [data-l="en"]{display:block}
+:root{--bg:#fff;--bg2:#f6f7f9;--ink:#14213d;--mut:#5f6b7a;--line:#e4e7ec;--acc:#0f766e;--accbg:#e6f4f2;--r:14px;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.w{max-width:1040px;margin-inline:auto;padding-inline:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .w::-webkit-scrollbar{display:none}
+nav b{white-space:nowrap;margin-inline-end:14px;font-weight:700}
+nav a{white-space:nowrap;color:var(--mut);font-size:.9rem;font-weight:500;padding:.3rem .7rem;border-radius:999px}
+nav a:hover{text-decoration:none;color:var(--ink)}nav a.on{background:var(--accbg);color:var(--acc)}
+.hero{padding-block:clamp(36px,8vw,84px)}
+.hero .w{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:0 0 10px}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.025em;margin:0 0 14px;font-weight:800;text-wrap:balance}
+.lead{font-size:clamp(1.02rem,2.4vw,1.2rem);color:var(--mut);max-width:34em;margin:0 0 6px}
+.aff{color:var(--ink);font-weight:500;margin:14px 0 22px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;border-radius:10px;padding:.6rem 1.1rem;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn:hover{text-decoration:none;filter:brightness(.97)}
+.photo{aspect-ratio:4/5;border-radius:22px;background:linear-gradient(160deg,var(--accbg),var(--bg2));border:1px solid var(--line);display:grid;place-items:center;font-size:3.2rem;font-weight:800;color:var(--acc);letter-spacing:-.02em}
+.photo small{display:block;font-size:.78rem;font-weight:500;color:var(--mut);text-align:center}
+section{padding-block:clamp(40px,7vw,72px);border-top:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(1.5rem,3.6vw,2.1rem);letter-spacing:-.02em;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 26px;max-width:42em}
+.two{display:grid;grid-template-columns:1.5fr 1fr;gap:36px}
+.int{display:grid;gap:10px}
+.int div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;font-weight:500}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.pub{display:grid;grid-template-columns:78px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.cover{aspect-ratio:3/4;border-radius:8px;background:linear-gradient(160deg,var(--accbg),var(--bg2));border:1px solid var(--line);display:grid;place-items:center;font-size:.7rem;color:var(--mut);text-align:center;padding:4px}
+.venue{font-size:.8rem;color:var(--acc);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.pub h3{margin:2px 0 4px;font-size:1.02rem;line-height:1.4}.pub .au{color:var(--mut);font-size:.9rem}
+.pub .me{color:var(--ink);font-weight:700}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{font:inherit;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:.15rem .8rem;cursor:pointer}
+.chip:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}.chip.off{opacity:.5;cursor:default}
+.tl{display:grid;gap:12px}
+.tl .it{display:grid;grid-template-columns:110px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.tl .y{color:var(--acc);font-weight:700}
+.tl h3{margin:0 0 2px;font-size:1rem}.tl p{margin:0;color:var(--mut);font-size:.92rem}
+.proj{cursor:pointer;padding:0;overflow:hidden;text-align:start;font:inherit;color:inherit;display:block;width:100%}
+.proj .ph{aspect-ratio:16/10;background:linear-gradient(135deg,var(--accbg),var(--bg2));display:grid;place-items:center;color:var(--mut);font-size:.85rem}
+.proj .t{padding:14px 16px}.proj h3{margin:0 0 4px;font-size:1.02rem}.proj p{margin:0;color:var(--mut);font-size:.9rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;background:var(--accbg);color:var(--acc);border-radius:999px;padding:.05rem .6rem;margin:8px 6px 0 0}
+.note{background:#fff7e6;border:1px solid #f3dfae;color:#7a5b10;border-radius:10px;padding:8px 12px;font-size:.85rem;margin-bottom:16px}
+.contact{background:var(--ink);color:#fff;border-top:0}
+.contact .sub{color:#c3cad6}.contact a{color:#fff;text-decoration:underline}
+.contact .btn{background:transparent;border-color:#3c4a66;color:#fff;text-decoration:none}
+footer{background:var(--ink);color:#8b97ab;font-size:.82rem;padding-block:20px;text-align:center}
+#detail{display:none}
+.back{display:inline-block;margin-bottom:16px;font-weight:600}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-block:12px}.gal div{aspect-ratio:4/3;border-radius:12px;background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:.8rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-block:14px}.facts div{background:var(--bg2);border-radius:12px;padding:12px 14px}.facts b{display:block}
+.vid{aspect-ratio:16/9;width:100%;border-radius:var(--r);background:#0e1a33;color:#fff;border:0;font:inherit;font-size:1.05rem;cursor:pointer}
+dialog{border:0;border-radius:var(--r);padding:18px;width:min(720px,calc(100% - 24px));max-height:88vh;overflow:auto}
+dialog::backdrop{background:rgba(20,33,61,.5)}
+pre{background:var(--bg2);border-radius:10px;padding:12px;overflow:auto;font-size:.8rem;white-space:pre-wrap;word-break:break-word}
+.tabs{display:flex;gap:8px;margin-bottom:10px}.tabs .chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+@media(max-width:760px){.hero .w,.two{grid-template-columns:1fr}.photo{max-width:260px}.pub{grid-template-columns:1fr}.cover{display:none}.tl .it{grid-template-columns:1fr;gap:2px}}
 </style>
-</head>
-<body>
-<main class="w">
-<div class="top"><span></span><button id="t">English / العربية</button></div>
+</head><body>
+<div id="main">
+<nav><div class="w"><b>Dr. Ibrahim Al-Najati</b><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Student projects</a><a href="#teaching">Teaching</a><a href="#honors">Honors</a><a href="#background">Education &amp; service</a><a href="#contact">Contact</a></div></nav>
 
-<h1 data-l="ar">د. ابراهيم علي حميد النجاتي</h1>
-<h1 data-l="en">Dr. Ibrahim Ali Hameed Al-Najati</h1>
-<p class="role" data-l="ar">تدريسي، قسم هندسة التقنيات الكهروميكانيكية · الجامعة التقنية الجنوبية، الكلية التقنية الهندسية – ميسان، العراق</p>
-<p class="role" data-l="en">Lecturer, Department of Electromechanical Engineering Technologies · Southern Technical University, Technical Engineering College – Maysan, Iraq</p>
+<header class="hero" id="top"><div class="w"><div>
+<p class="eyebrow">Mechanical Engineering · Energy</p>
+<h1>Dr. Ibrahim Ali Hameed Al-Najati</h1>
+<p class="lead">Lecturer and researcher working on piezoelectric energy harvesting, pavement and tire-strain energy, and multiphysics modelling.</p>
+<p class="aff">Department of Electromechanical Engineering Technologies<br>Technical Engineering College – Maysan, Southern Technical University, Iraq</p>
+<div class="row"><a class="btn p" href="#publications">Publications</a><a class="btn" href="https://www.youtube.com/@One2Billion">YouTube lectures</a><a class="btn" href="https://orcid.org/0000-0002-5585-7226">ORCID</a><a class="btn" href="#contact">Contact</a></div></div>
+<div class="photo"><div>IA<small>Portrait to be added</small></div></div></div></header>
 
-<h2 data-l="ar">نبذة</h2><h2 data-l="en">About</h2>
-<p data-l="ar">أكاديمي في الهندسة الميكانيكية (دكتوراه من جامعة العلوم الماليزية، 2024) تخصصه الدقيق الطاقة. تتركز اهتماماته البحثية في حصاد الطاقة بالمواد الكهروإجهادية، وحصاد الطاقة من الأرصفة وإجهاد الإطارات، والنمذجة متعددة الفيزياء. أشارك هنا المواد الدراسية والفيديوهات التعليمية للطلبة.</p>
-<p data-l="en">Mechanical engineering academic (PhD, Universiti Sains Malaysia, 2024) specialising in energy. Research interests: piezoelectric energy harvesting, harvesting from pavements and tire strain, and multiphysics modelling. This site shares course materials and educational videos for students.</p>
+<section id="about"><div class="w two"><div><h2>About</h2>
+<p>I am an academic in mechanical engineering with a PhD from Universiti Sains Malaysia (2024), specialising in energy. My research focuses on harvesting energy from piezoelectric materials, from pavements and from tire strain, supported by finite-element and multiphysics modelling.</p>
+<p>I combine teaching, supervision of graduation projects and academic administration at a technical engineering college, and I share educational videos for students on YouTube.</p></div>
+<div><h2 style="font-size:1.1rem">Research interests</h2><div class="int"><div>Piezoelectric (PZT) energy harvesting</div><div>Energy from pavements and tire strain</div><div>Sustainable asphalt mixtures and pavement dynamics</div><div>Multiphysics finite-element modelling (COMSOL)</div><div>Asphalt pavement health monitoring</div></div></div></div></section>
 
-<h2 data-l="ar">الروابط الرئيسية</h2><h2 data-l="en">Main links</h2>
-<div class="links">
-<a class="p" data-l="ar" href="https://www.youtube.com/@One2Billion">قناة يوتيوب – One2Billion</a>
-<a class="p" data-l="en" href="https://www.youtube.com/@One2Billion">YouTube – One2Billion</a>
+<section id="research" class="alt"><div class="w"><h2>Research</h2><p class="sub">Four connected lines of work.</p><div class="cards">
+<div class="card"><p class="venue">Energy</p><h3>Tire-strain energy harvesting</h3><p>Piezoelectric harvesters embedded in tires to power on-board sensing, from design and simulation to experimental validation.</p></div>
+<div class="card"><p class="venue">Infrastructure</p><h3>Pavement energy and monitoring</h3><p>Harvesting energy from asphalt pavements and using it for pavement health monitoring.</p></div>
+<div class="card"><p class="venue">Modelling</p><h3>Multiphysics simulation</h3><p>Finite-element models in COMSOL Multiphysics to optimise devices before building them.</p></div>
+<div class="card"><p class="venue">Materials</p><h3>Sustainable construction materials</h3><p>Thermal insulation and building materials made from local and recycled resources.</p></div>
+</div></div></section>
+
+<section id="publications"><div class="w"><h2>Publications</h2><p class="sub">Use the Cite button to copy BibTeX, RIS or APA in one click.</p><div id="pubs"></div></div></section>
+
+<section id="projects" class="alt"><div class="w"><h2>Student graduation projects</h2><p class="sub">Each project has its own page with photos, team, idea and video.</p>
+<div class="note">Layout demo only. The project below is a placeholder until real projects are added.</div>
+<div class="cards"><button class="card proj" onclick="location.hash='#project'"><div class="ph">Project image</div><div class="t"><h3>Graduation project title (sample)</h3><p>One line explaining the idea and its benefit.</p><span class="tag">2026</span><span class="tag">Energy</span></div></button></div></div></section>
+
+<section id="teaching"><div class="w"><h2>Teaching</h2><p class="sub">Technical Engineering College – Maysan.</p><div class="tl">
+<div class="it"><div class="y">Course</div><div><h3>Renewable Energy (STUMETC475)</h3><p>Department of Electromechanical Engineering Technologies</p></div></div>
+<div class="it"><div class="y">Year 1</div><div><h3>Engineering Materials; Pneumatic Control Circuit Elements</h3></div></div>
+<div class="it"><div class="y">Year 4</div><div><h3>Graduation Project supervision</h3></div></div></div></div></section>
+
+<section id="honors" class="alt"><div class="w"><h2>Honors</h2><div class="tl" style="margin-top:20px"><div class="it"><div class="y">2024</div><div><h3>Sanggar Sanjung Award – Journal Publication, Student Category</h3><p>Institute of Postgraduate Studies, Universiti Sains Malaysia</p></div></div></div></div></section>
+
+<section id="background"><div class="w"><h2>Education &amp; service</h2><div class="two" style="margin-top:20px"><div class="tl">
+<div class="it"><div class="y">2024</div><div><h3>PhD, Mechanical Engineering (Energy)</h3><p>Universiti Sains Malaysia</p></div></div>
+<div class="it"><div class="y">2016</div><div><h3>MSc, Mechanical Engineering (Energy), Distinction</h3><p>University of Hertfordshire, UK</p></div></div>
+<div class="it"><div class="y">2011</div><div><h3>BSc, Mechanical Engineering</h3><p>Al-Mustansiriyah University, Baghdad</p></div></div></div>
+<div class="tl"><div class="it" style="grid-template-columns:1fr"><div><h3>Academic service</h3><p>Scientific Committee, Southern Technical University (2024)</p></div></div><div class="it" style="grid-template-columns:1fr"><div><h3>Languages</h3><p>Arabic (native) · English (fluent)</p></div></div></div></div></div></section>
+
+<section id="contact" class="contact"><div class="w"><h2>Contact</h2><p class="sub">Students and researchers are welcome to get in touch about teaching, projects and collaboration.</p>
+<p style="font-size:1.1rem;margin:0 0 16px">ibrahim.hameed@stu.edu.iq</p>
+<div class="row"><a class="btn" href="https://scholar.google.com/citations?user=ilFlAhUAAAAJ&hl=en">Google Scholar</a><a class="btn" href="https://www.researchgate.net/profile/Ibrahim-Al-Najati">ResearchGate</a><a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=57222659125">Scopus</a><a class="btn" href="https://www.linkedin.com/in/al-najati/">LinkedIn</a><a class="btn" href="https://www.youtube.com/@One2Billion">YouTube</a></div></div></section>
+<footer>© 2026 Dr. Ibrahim Al-Najati · Amarah, Maysan, Iraq</footer>
 </div>
 
-<h2 data-l="ar">الملفات البحثية</h2><h2 data-l="en">Research profiles</h2>
-<div class="links">
-<a href="https://orcid.org/0000-0002-5585-7226">ORCID</a>
-<a href="https://scholar.google.com/citations?user=ilFlAhUAAAAJ&hl=en">Google Scholar</a>
-<a href="https://www.researchgate.net/profile/Ibrahim-Al-Najati">ResearchGate</a>
-<a href="https://www.scopus.com/authid/detail.uri?authorId=57222659125">Scopus</a>
-<a href="https://www.linkedin.com/in/al-najati/">LinkedIn</a>
-</div>
-
-<h2 data-l="ar">التواصل</h2><h2 data-l="en">Contact</h2>
-<p data-l="ar">للطلبة والباحثين: <span class="mail">ibrahim.hameed@stu.edu.iq</span>.</p>
-<p data-l="en">Students and researchers: <span class="mail">ibrahim.hameed@stu.edu.iq</span>.</p>
-
-</main>
+<div id="detail"><nav><div class="w"><b>Dr. Ibrahim Al-Najati</b></div></nav><div class="w" style="padding-block:28px 64px"><a class="back" href="#projects">← Back to projects</a>
+<p class="eyebrow">Graduation project · 2026</p><h1 style="font-size:clamp(1.8rem,5vw,2.8rem)">Graduation project title (sample)</h1>
+<p class="sub">Department of Electromechanical Engineering Technologies</p><div class="note">Layout demo only. All content here is placeholder.</div>
+<div class="gal"><div>Photo 1</div><div>Photo 2</div><div>Photo 3</div></div>
+<h2 style="font-size:1.2rem">The idea</h2><p>A short, clear paragraph on what the project does and how it works, written for a non-specialist.</p>
+<div class="facts"><div><b>Problem</b>One line</div><div><b>Solution</b>One line</div><div><b>Benefit</b>A number or measured result</div></div>
+<h2 style="font-size:1.2rem">Video</h2><button class="vid" id="vb">▶ Play project video</button><p class="sub" style="margin-top:6px;font-size:.85rem">The video loads only when tapped, so the site stays fast.</p>
+<h2 style="font-size:1.2rem">Team</h2><div class="row"><span class="chip">Student name 1</span><span class="chip">Student name 2</span><span class="chip">Student name 3</span></div>
+<p style="margin-top:14px"><b>Supervisor:</b> Dr. Ibrahim Al-Najati</p></div></div>
+<dialog id="dlg"></dialog>
 <script>
-(function(){var h=document.documentElement;function s(l){h.lang=l;h.dir=l==="ar"?"rtl":"ltr";document.body.style.direction=h.dir;document.body.style.textAlign=l==="ar"?"right":"left"}
-s("ar");document.getElementById("t").onclick=function(){s(h.lang==="ar"?"en":"ar")}})();
+var P=[
+{t:"j",k:"alnajati2026",a:"Al-Najati, I. A. H., Allamy, W. K. J., Al-Saedi, D. S. J., & Al Saiydee, M. A. M.",y:2026,ti:"Thermal efficiency of polystyrene-filled concrete blocks in residential buildings: A case study in Al Amarah City",j:"Advanced Materials Research",d:"10.4028/p-0r4lo5"},
+{t:"j",k:"alnajati2024a",a:"Al-Najati, I., Chan, K. W., Jasim, A. F., & Pung, S.-Y.",y:2024,ti:"Development and optimization of a new end-cap tire-strain piezoelectric energy harvester (TSPEH)",j:"Energy Conversion and Management",d:"10.1016/j.enconman.2024.118109"},
+{t:"j",k:"alnajati2024b",a:"Al-Najati, I. A., Jasim, A. F., Chan, K. W., & Pung, S.-Y.",y:2024,ti:"The future of tire energy: A novel one-end cap structure for sustainable energy harvesting",j:"Materials for Renewable and Sustainable Energy",d:"10.1007/s40243-023-00254-3"},
+{t:"j",k:"alnajati2022",a:"Al-Najati, I. A. H., Chan, K. W., & Pung, S.-Y.",y:2022,ti:"Tire strain piezoelectric energy harvesters: A systematic review",j:"International Journal of Power Electronics and Drive Systems (IJPEDS)",v:"13",n:"1",p:"444-459",d:"10.11591/ijpeds.v13.i1.pp444-459"},
+{t:"c",k:"allamy2021",a:"Allamy, W. K. J., & Al-Najati, I. A. H.",y:2021,ti:"A thermal insulator manufacturing, using solid residuals from pulp and paper factories in Missan City",j:"13th AUN/SEED-Net Regional Conference on Materials (RCM 2020) and 1st International Conference on Materials Engineering and Manufacturing (ICMEM 2020), AIP Conference Proceedings",d:"10.1063/5.0067247"}];
+function au(p){var x=p.a.replace(/,? & /g,", ").split(/\.,\s+(?=[A-Z])/);return x.map(function(v,i){return i<x.length-1&&!/\.$/.test(v)?v+".":v})}
+function bib(p){var c=p.t=="c";return "@"+(c?"inproceedings":"article")+"{"+p.k+",\n  author = {"+au(p).join(" and ")+"},\n  title = {"+p.ti+"},\n  "+(c?"booktitle":"journal")+" = {"+p.j+"},\n  year = {"+p.y+"},"+(p.v?"\n  volume = {"+p.v+"},\n  number = {"+p.n+"},\n  pages = {"+p.p+"},":"")+"\n  doi = {"+p.d+"}\n}"}
+function ris(p){return "TY  - "+(p.t=="c"?"CONF":"JOUR")+"\n"+au(p).map(function(x){return "AU  - "+x}).join("\n")+"\nTI  - "+p.ti+"\n"+(p.t=="c"?"T2":"JO")+"  - "+p.j+"\nPY  - "+p.y+(p.v?"\nVL  - "+p.v+"\nIS  - "+p.n+"\nSP  - "+p.p.split("-")[0]+"\nEP  - "+p.p.split("-")[1]:"")+"\nDO  - "+p.d+"\nER  - "}
+function apa(p){return p.a+" ("+p.y+"). "+p.ti+". "+(p.t=="c"?"In ":"")+p.j+(p.v?", "+p.v+"("+p.n+"), "+p.p:"")+". https://doi.org/"+p.d}
+function hl(p){return p.a.replace(/Al-Najati, I\.[ A-Z.]*?(?=,| &|$)/,function(m){return '<span class="me">'+m+'</span>'})}
+function cite(i){var p=P[i],f={BibTeX:bib(p),RIS:ris(p),APA:apa(p)},d=document.getElementById("dlg"),cur="BibTeX";
+function sel(){var x=document.createRange();x.selectNodeContents(d.querySelector("#cc"));var s=getSelection();s.removeAllRanges();s.addRange(x)}
+function r(){d.innerHTML='<div class="tabs">'+Object.keys(f).map(function(k){return '<button class="chip'+(k==cur?" on":"")+'" data-k="'+k+'">'+k+'</button>'}).join("")+'</div><pre id="cc"></pre><div class="acts"><button id="cp" class="chip">Copy</button><button id="cl" class="chip">Close</button></div>';
+d.querySelector("#cc").textContent=f[cur];
+d.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){cur=b.dataset.k;r()}});
+d.querySelector("#cl").onclick=function(){d.close()};
+d.querySelector("#cp").onclick=function(){var b=this;try{navigator.clipboard.writeText(f[cur]).then(function(){b.textContent="Copied"},sel)}catch(e){sel()}}}
+r();d.showModal()}
+document.getElementById("pubs").innerHTML=P.map(function(p,i){return '<div class="pub"><div class="cover">Journal cover</div><div><p class="venue">'+(p.t=="c"?"Conference paper":"Journal article")+" · "+p.y+'</p><h3>'+p.ti+'</h3><div class="au">'+hl(p)+'</div><div class="au"><i>'+p.j+'</i></div><div class="acts"><button class="chip" onclick="cite('+i+')">Cite</button><a class="chip" href="https://doi.org/'+p.d+'">DOI</a><span class="chip off">PDF · pending</span></div></div></div>'}).join("");
+document.getElementById("pubs").querySelectorAll(".cover").forEach(function(c,i){c.textContent=P[i].t=="c"?"Proceedings":"Journal cover"});
+function route(){var pr=location.hash=="#project";document.getElementById("main").style.display=pr?"none":"block";document.getElementById("detail").style.display=pr?"block":"none";if(pr)scrollTo(0,0);else if(location.hash.length>1){var e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView()}}
+addEventListener("hashchange",route);route();
+document.getElementById("vb").onclick=function(){this.outerHTML='<iframe class="vid" loading="lazy" src="https://www.youtube-nocookie.com/embed/VIDEO_ID?autoplay=1" allowfullscreen style="border:0"></iframe>'};
+var links=[].slice.call(document.querySelectorAll("nav a"));
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)})}
 </script>
-
-</body>
-</html>
+</body></html>
