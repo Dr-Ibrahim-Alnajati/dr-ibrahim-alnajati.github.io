@@ -9,6 +9,8 @@ Rules
 - Playlists listed in lectures-config.json "exclude" are skipped.
 - lectures-config.json "playlists" can give a playlist an English title, a subtitle,
   a kind ("course" or "other"), a sort mode ("number") and text to strip from video titles.
+- Playlists are discovered with yt-dlp and, as a second source, from the channel page itself.
+  Optional "include" in the config adds playlist ids by hand. Extras must belong to the channel.
 - Private or deleted videos are skipped.
 - If a playlist cannot be read this time, its last good copy in lectures.json is kept.
 - lectures.json is rewritten only when something really changed.
@@ -17,6 +19,7 @@ import json
 import re
 import subprocess
 import sys
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -37,6 +40,25 @@ def ytdlp(url):
 def playlist_id(entry):
     m = re.search(r"list=([\w-]+)", entry.get("url") or "")
     return m.group(1) if m else entry.get("id")
+
+
+def scrape_ids(channel):
+    """Second source: playlist ids that appear in the channel's Playlists page."""
+    try:
+        req = urllib.request.Request(
+            channel.rstrip("/") + "/playlists?hl=en",
+            headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                                   "(KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+                     "Accept-Language": "en-US,en;q=0.9", "Cookie": "CONSENT=YES+1"})
+        html = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+    except Exception as ex:
+        print("WARN page scrape: %s" % ex, file=sys.stderr)
+        return []
+    ids = []
+    for m in re.finditer(r'"(?:contentId|playlistId)":"((?:PL|OLAK5uy_)[\w-]+)"', html):
+        if m.group(1) not in ids:
+            ids.append(m.group(1))
+    return ids
 
 
 def clean(title, strip):
@@ -75,6 +97,16 @@ def main():
             found.append(pid)
     if not found:
         sys.exit("No playlists found - keeping the existing lectures.json")
+    channel_id = listing.get("channel_id") or listing.get("uploader_id")
+
+    include = cfg.get("include", [])
+    scraped = [i for i in scrape_ids(cfg["channel"]) if i not in titles]
+    extras = scraped + [i for i in include if i not in titles and i not in scraped]
+    print("playlists: %d from yt-dlp, %d extra from page/include: %s" % (len(found), len(extras), extras))
+    for i in extras:
+        titles[i] = ""
+        found.append(i)
+    unverified = set(scraped) - set(include)  # must be checked against the channel id
 
     order = [i for i in conf if i in titles] + [i for i in found if i not in conf]
 
@@ -85,6 +117,10 @@ def main():
         c = conf.get(pid, {})
         try:
             data = ytdlp("https://www.youtube.com/playlist?list=" + pid)
+            owner = data.get("channel_id") or data.get("uploader_id")
+            if pid in unverified and channel_id and owner != channel_id:
+                print("skip %s: belongs to another channel" % pid)
+                continue
             videos = []
             for e in data.get("entries") or []:
                 t = (e.get("title") or "").strip()
