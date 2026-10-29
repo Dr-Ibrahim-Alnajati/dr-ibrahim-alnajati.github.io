@@ -467,7 +467,51 @@
      "title": ""
     }
    ]
+  },
+  {
+   "id": "PLevlC5HGyYEY",
+   "title": "أساليب التحليل الإحصائي المتقدم (SEM-PLS | fsQCA | MCDM)",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "CnY7nWiiFRg",
+     "title": "الورشة الاولى: نمذجة المعادلات الهيكلية بطريقة المربعات الصغرى الجزيئية | SEM-PLS"
+    },
+    {
+     "id": "TbPrbCcjf8c",
+     "title": "الورشة الثانية: التحليل المقارن النوعي الضبابي | fsQCA"
+    },
+    {
+     "id": "niv21iNPO-I",
+     "title": "الورشة الثالثة: أساليب اتخاذ القرار متعددة المعايير | MCDM"
+    }
+   ]
+  },
+  {
+   "id": "PL4KpK0XeF70RM-G1B8AobQ6oyRLfOYs7A",
+   "title": "Piezoelectric Lab test",
+   "sub": "",
+   "kind": "other",
+   "videos": [
+    {
+     "id": "yis_v6wFF1k",
+     "title": "Piezo harvester | Lab test 3"
+    },
+    {
+     "id": "t2gZL5pR6Lc",
+     "title": "Piezo harvester | Lab test 2"
+    },
+    {
+     "id": "-8YXIDxblO8",
+     "title": "Piezo harvester | Lab test 1"
+    },
+    {
+     "id": "JUy0lQjX7TM",
+     "title": ""
+    }
+   ]
   }
  ],
- "updated": "2026-10-29T11:42:05Z"
+ "updated": "2026-10-29T11:46:47Z"
 }
