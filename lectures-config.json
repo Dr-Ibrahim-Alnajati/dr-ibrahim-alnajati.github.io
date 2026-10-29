@@ -1,9 +1,6 @@
 {
   "channel": "https://www.youtube.com/@One2Billion",
-  "exclude": [
-    "PL4KpK0XeF70Qu_5NhLboDA-7jtxjm-jgL",
-    "PL4KpK0XeF70TinHS8yXnjdh6mpH2s0lY0"
-  ],
+  "exclude": [],
   "playlists": {
     "PL4KpK0XeF70QWXmdCnYTvrN_lJBEZYxrl": {
       "title": "Engineering Materials",
