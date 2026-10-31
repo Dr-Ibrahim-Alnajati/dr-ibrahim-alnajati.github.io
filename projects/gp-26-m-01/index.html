@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Campus (GP-26-M-01) | Dr. Ibrahim Al-Najati</title>
+<meta name="description" content="Smart Campus: a graduation project, built by hand by seven students, that turns a model house into a miniature campus managing its own energy and air. Supervised by Dr. Ibrahim Al-Najati, Missan Engineering Technical College, Southern Technical University, Iraq.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Ibrahim Al-Najati">
+<meta property="og:title" content="Smart Campus: a miniature campus that manages its own energy">
+<meta property="og:description" content="Five readings in, automatic ventilation, lighting and safety out: the first step toward an energy-smart university campus. A graduation project from Missan Engineering Technical College, Southern Technical University, Iraq.">
+<meta property="og:url" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/">
+<meta property="og:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A blue acrylic model house, a miniature campus building, with a display on its front wall and a fan in the doorway">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smart Campus: a miniature campus that manages its own energy">
+<meta name="twitter:description" content="Five readings in, automatic ventilation, lighting and safety out.">
+<meta name="twitter:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/img/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Smart Campus Environmental Management System","alternateName":"GP-26-M-01","description":"A final-year graduation project: a miniature campus building with temperature, humidity, motion, light and gas sensors that switches ventilation, lighting and a safety alarm automatically, as the first step toward energy management across a university campus.","url":"https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/","image":"https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-01/img/og.jpg","inLanguage":"en","contributor":{"@id":"https://dr-ibrahim-alnajati.github.io/#person"},"isPartOf":{"@type":"WebSite","name":"Dr. Ibrahim Al-Najati","url":"https://dr-ibrahim-alnajati.github.io/"}}</script>
+<style>
+:root{--bg:#fff;--bg2:#f6f7f9;--ink:#14213d;--mut:#5f6b7a;--line:#e4e7ec;--acc:#0f766e;--accbg:#e6f4f2;--r:14px;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+.w{max-width:1040px;margin-inline:auto;padding-inline:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .w::-webkit-scrollbar{display:none}
+nav b{white-space:nowrap;margin-inline-end:14px;font-weight:700}nav b a{color:var(--ink)}
+nav a{white-space:nowrap;color:var(--mut);font-size:.9rem;font-weight:500;padding:.3rem .7rem;border-radius:999px}
+nav a:hover{text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;border-radius:10px;padding:.6rem 1.1rem;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn:hover{text-decoration:none;filter:brightness(.97)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:0 0 10px}
+
+/* hero */
+.hero{padding-block:clamp(32px,7vw,72px) clamp(24px,4vw,40px)}
+.hero .w{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,48px);align-items:center}
+h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;font-weight:800;text-wrap:balance}
+.lead{font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--mut);max-width:30em;margin:0 0 22px}
+.lead b{color:var(--ink)}
+.hp{aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(20,33,61,.45)}
+.hp img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-block:8px clamp(32px,6vw,56px)}
+.stats div{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stats b{display:block;font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;color:var(--acc);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats span{display:block;color:var(--mut);font-size:.85rem;line-height:1.35;margin-top:4px}
+
+/* story timeline */
+.story{list-style:none;margin:0;padding:0}
+.st{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 clamp(14px,3vw,28px)}
+.rail{position:relative}
+.rail::after{content:"";position:absolute;left:50%;top:52px;bottom:0;width:2px;transform:translateX(-50%);background:linear-gradient(var(--acc),var(--line))}
+.st:last-child .rail::after{display:none}
+.node{width:44px;height:44px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem;font-variant-numeric:tabular-nums;box-shadow:0 0 0 6px var(--accbg)}
+.sb{padding-bottom:clamp(44px,8vw,84px);min-width:0}
+.kick{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:10px 0 6px}
+.sb h2{font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.12;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.sb p{margin:0 0 14px;max-width:40em;color:#2b3a55}
+.sb p.m{color:var(--mut);font-size:.92rem}
+figure{margin:0}
+figcaption{font-size:.82rem;color:var(--mut);margin-top:6px;line-height:1.4}
+.fig img{border-radius:12px;border:1px solid var(--line);width:100%}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-block:18px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-block:18px}
+.g2 .fig img,.g3 .fig img{aspect-ratio:4/3;object-fit:cover}
+.wide{margin-block:18px}
+.with-v{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(18px,4vw,36px);align-items:center;margin-block:18px}
+.vid{position:relative;display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:16px;overflow:hidden;background:#0e1a33 center/cover no-repeat;cursor:pointer;padding:0;font:inherit;color:#fff;box-shadow:0 14px 34px -20px rgba(20,33,61,.6)}
+.vid::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,20,40,.7))}
+.vid i{position:absolute;left:50%;top:48%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center}
+.vid i::after{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--acc)}
+.vid span{position:absolute;left:14px;right:14px;bottom:12px;text-align:start;font-weight:600;font-size:.92rem;line-height:1.3}
+.vid:hover i{transform:scale(1.06)}
+iframe.vid{border:0}
+.vtxt h3{margin:0 0 6px;font-size:1.05rem}.vtxt p{font-size:.95rem}
+.pv{font-size:.76rem;color:#7a5b10;background:#fff7e6;border:1px solid #f3dfae;border-radius:8px;padding:6px 10px;margin-top:8px}
+
+/* chart */
+.chart{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px 12px;margin-block:18px}
+.chart h3{margin:0 0 2px;font-size:1rem}.chart p.m{margin:0 0 8px}
+.lg{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:.82rem;font-weight:600;color:var(--acc)}
+.lg i{width:26px;border-top:2px dashed var(--acc)}
+.bc i,.bc em{font-style:normal}
+.bc .plot{position:relative;height:clamp(190px,40vw,250px);margin-left:38px}
+.bc .gl{position:absolute;left:0;right:0;height:0;border-top:1px solid var(--line)}
+.bc .gl b{position:absolute;right:calc(100% + 8px);top:-.7em;font-size:.78rem;font-weight:500;color:var(--mut);white-space:nowrap}
+.bc .th{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--acc);z-index:2}
+.bc .cols{position:absolute;inset:0;display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px)}
+.bc .c{flex:1;display:flex;align-items:flex-end;justify-content:center;min-width:0}
+.bc em{display:block;position:relative;width:min(96px,100%);background:var(--acc);border-radius:6px 6px 0 0}
+.bc em.lo{background:#5eaaa3}
+.bc em b{z-index:3;background:var(--bg2);border-radius:4px;padding-inline:4px;position:absolute;left:50%;bottom:100%;transform:translateX(-50%);padding-bottom:4px;font-size:clamp(.95rem,3.4vw,1.25rem);font-weight:800;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bc .xl{display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px);margin:8px 0 0 38px}
+.bc .xl span{flex:1;text-align:center;font-size:.85rem;color:var(--mut)}
+.facts2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:18px}
+.facts2 div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.facts2.col{grid-template-columns:1fr;margin-block:0}.facts2 b{display:block;font-size:1.02rem}.facts2 span{display:block;color:var(--mut);font-size:.88rem;line-height:1.45;margin-top:2px}
+
+/* product */
+.uses{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px;max-width:40em}
+.uses li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:500;color:#2b3a55}
+.road{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:8px}
+.road div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.road div.done{border-color:var(--acc);background:var(--accbg)}
+.road em{font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.road .done em{color:var(--acc)}
+.road b{display:block;margin:4px 0 2px}.road span{display:block;font-size:.88rem;color:var(--mut);line-height:1.45}
+
+/* support */
+.support{background:var(--ink);color:#fff;padding-block:clamp(44px,8vw,80px)}
+.support h2{font-size:clamp(1.7rem,4.5vw,2.7rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.support p{color:#c3cad6;max-width:38em;margin:0 0 18px}
+.asks{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.asks li{border:1px solid #3c4a66;border-radius:var(--r);padding:14px 16px;color:#e8ecf3}
+.asks b{display:block;color:#fff;margin-bottom:2px}
+.support .btn{background:transparent;border-color:#3c4a66;color:#fff}.support .btn.p{background:#fff;border-color:#fff;color:var(--ink)}
+
+.proj-meta{padding-block:clamp(28px,5vw,44px)}
+.proj-meta h2{font-size:1.1rem;margin:0 0 12px}
+.proj-meta dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 24px;margin:0}
+.proj-meta dt{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.proj-meta dd{margin:0 0 6px;font-weight:500}
+footer{background:var(--ink);color:#8b97ab;font-size:.82rem;padding-block:20px;text-align:center;border-top:1px solid #243252}
+
+@media(max-width:760px){
+.hero .w{grid-template-columns:1fr}.hp{max-width:340px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.st{grid-template-columns:36px minmax(0,1fr)}.node{width:34px;height:34px;font-size:.8rem;box-shadow:0 0 0 4px var(--accbg)}.rail::after{top:42px}
+.g2,.g3{grid-template-columns:1fr 1fr}.g3 .fig:last-child{grid-column:1/-1}
+.with-v{grid-template-columns:1fr}.with-v .vbox{max-width:260px}
+.facts2,.road,.asks{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.vid:hover i{transform:none}}
+
+.hp.land{aspect-ratio:1200/949;background:#0f1b33}
+.hp.land img{object-fit:contain}
+.eq{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:6px 0 16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(.86rem,2.6vw,1rem);overflow-x:auto;color:var(--ink)}
+.eq small{display:block;margin-top:6px;color:var(--mut);font-family:Inter,system-ui,sans-serif;font-size:.82rem}
+.sev{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-block:12px 18px}
+.sev div{border-radius:10px;padding:10px 8px;text-align:center;font-size:.8rem;line-height:1.3;border:1px solid var(--line);background:#fff}
+.sev b{display:block;font-size:.9rem}
+.sev .s1{border-top:4px solid #2ecc71}.sev .s2{border-top:4px solid #27ae60}.sev .s3{border-top:4px solid #f39c12}.sev .s4{border-top:4px solid #e67e22}.sev .s5{border-top:4px solid #e74c3c}
+.tw{overflow-x:auto;margin-block:14px;border:1px solid var(--line);border-radius:12px}
+table.t{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem;font-variant-numeric:tabular-nums}
+table.t th,table.t td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th{background:var(--bg2);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+table.t tr:last-child td{border-bottom:0}
+.chip{display:inline-block;border-radius:999px;padding:1px 10px;font-size:.8rem;font-weight:600;color:#fff}
+.chip.vl{background:#2ecc71;color:#10391f}.chip.l{background:#27ae60}.chip.m{background:#f39c12;color:#3d2800}.chip.h{background:#e74c3c}
+.sim{font-size:.82rem;color:#7a5b10;background:#fff7e6;border:1px solid #f3dfae;border-radius:10px;padding:9px 12px;margin:14px 0;max-width:44em}
+@media(max-width:760px){.sev{grid-template-columns:repeat(2,minmax(0,1fr))}.sev div:last-child{grid-column:1/-1}}
+
+.hp.l43{aspect-ratio:4/3}.hp.l43 img{object-fit:cover}
+.pipe{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);gap:8px;align-items:stretch;margin-block:16px 18px}
+.pipe .bx{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;font-size:.88rem;line-height:1.4}
+.pipe .bx b{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:4px}
+.pipe .ar{display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:1.3rem}
+.g3 .fig img.tall{aspect-ratio:3/4}
+.vp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:620px;margin-block:18px}
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-block:16px 6px}
+.why div{background:var(--accbg);border-radius:var(--r);padding:14px 16px}.why b{display:block;color:var(--acc)}.why span{display:block;font-size:.88rem;color:#2b3a55;line-height:1.45;margin-top:2px}
+@media(max-width:760px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.g3 .fig:last-child{grid-column:auto}.pipe{grid-template-columns:1fr}.pipe .ar{transform:rotate(90deg);height:20px}}
+
+.scale{display:grid;gap:10px;margin-block:18px;max-width:760px}
+.sc{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1.5fr);align-items:stretch;gap:8px}
+.sc .a,.sc .b{border-radius:var(--r);padding:12px 16px;border:1px solid var(--line);background:#fff}
+.sc .b{background:var(--accbg);border-color:transparent}
+.sc small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.sc .b small{color:var(--acc)}.sc b{display:block;font-size:.98rem;margin-top:2px}
+.sc i{display:flex;align-items:center;justify-content:center;font-style:normal;color:var(--acc);font-size:1.3rem}
+.ben{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-block:18px}
+.ben div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px}
+.ben svg{width:34px;height:34px;padding:7px;border-radius:10px;background:var(--accbg);stroke:var(--acc);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px;display:block}
+.ben b{display:block;font-size:1.02rem}.ben span{display:block;color:var(--mut);font-size:.9rem;line-height:1.5;margin-top:3px}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-block:18px}
+.bento figure{position:relative;margin:0;border-radius:16px;overflow:hidden;background:#0e1a33;min-height:0}
+.bento img{width:100%;height:100%;object-fit:cover;display:block;border:0;border-radius:0}
+.bento figcaption{position:absolute;inset:auto 0 0 0;padding:34px 14px 12px;color:#fff;font-size:.84rem;font-weight:600;line-height:1.3;background:linear-gradient(transparent,rgba(8,16,34,.78));margin:0}
+.bento .h{grid-column:span 4;aspect-ratio:3/2}.bento .t{grid-column:span 2;aspect-ratio:auto}
+.bento .s{grid-column:span 2;aspect-ratio:1/1}
+.bento .t img{object-position:50% 35%}.bento .s img{object-position:50% 40%}
+.vcard{display:grid;grid-template-columns:210px minmax(0,1fr);gap:clamp(18px,4vw,36px);align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:clamp(14px,3vw,22px);margin-block:16px}
+.vcard.rev{grid-template-columns:minmax(0,1fr) 210px}.vcard.rev .vbox{order:2}
+.vcard h3{font-size:clamp(1.25rem,3vw,1.6rem);line-height:1.15;letter-spacing:-.02em;margin:2px 0 8px}
+.vcard p{margin:0 0 12px;color:#2b3a55;max-width:34em}
+.vcard .kick{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.8rem;font-weight:600;color:#2b3a55}
+.specs{display:flex;flex-wrap:wrap;gap:8px 22px;margin:6px 0 0;padding:0;list-style:none;color:var(--mut);font-size:.9rem}
+.specs b{color:var(--ink)}
+table.t td,table.t th{white-space:normal}table.t{min-width:0}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:12px}
+.steps3 div{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.steps3 .done{background:var(--accbg);border-color:var(--acc)}
+.steps3 em{font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.steps3 b{display:block;margin:3px 0 3px;font-size:1.02rem}.steps3 span{display:block;font-size:.88rem;color:var(--mut);line-height:1.45}
+@media(max-width:760px){
+.sc{grid-template-columns:1fr}.sc i{transform:rotate(90deg);height:18px}
+.ben{grid-template-columns:1fr 1fr}
+.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.bento .h{grid-column:1/-1}.bento .t,.bento .s{grid-column:span 1;aspect-ratio:3/4}
+.vcard,.vcard.rev{grid-template-columns:1fr}.vcard .vbox,.vcard.rev .vbox{order:0;max-width:240px;margin-inline:auto;width:100%}
+.steps3{grid-template-columns:1fr}
+}
+@media(max-width:480px){.ben{grid-template-columns:1fr}}
+
+</style></head><body>
+<nav><div class="w"><b><a href="/">Dr. Ibrahim Al-Najati</a></b><a href="/#projects">&larr; All projects</a><a href="#proof">Built by hand</a><a href="#support">Support</a><a href="/#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="w">
+<div>
+<p class="eyebrow">GP-26-M-01 · Graduation project · 2026</p>
+<h1>Smart Campus</h1>
+<p class="lead"><b>The house is a miniature campus.</b> Seven students built, wired and programmed a system that senses every room and switches ventilation, lighting and safety alarms by itself, the first step toward managing a university's energy and air with far less waste.</p>
+<div class="row"><a class="btn p" href="#proof">See it built</a><a class="btn" href="#support">Support this project</a></div>
+</div>
+<div class="hp l43"><img src="img/hero.jpg" alt="The model house, a miniature campus building: blue acrylic walls with a display on the front wall and a fan in the doorway" width="1200" height="900" fetchpriority="high" decoding="async"></div>
+</div></header>
+
+<div class="w"><div class="stats" aria-label="Key figures">
+<div><b>7</b><span>final-year students built it by hand</span></div>
+<div><b>5</b><span>readings: temperature, humidity, motion, light, gas</span></div>
+<div><b>3</b><span>jobs done automatically: ventilation, lighting, safety</span></div>
+<div><b>2 s</b><span>between readings, shown live on the display</span></div>
+</div></div>
+
+<main class="w"><ol class="story">
+
+<li class="st"><div class="rail"><div class="node">01</div></div><div class="sb">
+<p class="kick">The idea</p>
+<h2>A campus that manages its own energy.</h2>
+<p>Universities keep growing: more students, more buildings, more lights and fans. Without control, energy is spent on empty rooms and air quality is left to chance. This project puts a small brain in every room: it senses what is happening, decides, and acts.</p>
+<p>The model house stands for a campus building. Each thing it does has a direct meaning on a real campus:</p>
+<div class="scale">
+<div class="sc"><div class="a"><small>On the model</small><b>The fan</b></div><i aria-hidden="true">&rarr;</i><div class="b"><small>On a campus</small><b>Ventilation for lecture halls and laboratories</b></div></div>
+<div class="sc"><div class="a"><small>On the model</small><b>The light</b></div><i aria-hidden="true">&rarr;</i><div class="b"><small>On a campus</small><b>Lighting that follows people, not the clock</b></div></div>
+<div class="sc"><div class="a"><small>On the model</small><b>The gas alarm</b></div><i aria-hidden="true">&rarr;</i><div class="b"><small>On a campus</small><b>Early safety warning in labs and workshops</b></div></div>
+<div class="sc"><div class="a"><small>On the model</small><b>Wi-Fi and display</b></div><i aria-hidden="true">&rarr;</i><div class="b"><small>On a campus</small><b>One central view of every building's readings</b></div></div>
+</div>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">02</div></div><div class="sb">
+<p class="kick">How it works</p>
+<h2>Sense. Decide. Act.</h2>
+<p>Sensors read the room, an Arduino board applies simple rules, and the room responds. A Wi-Fi module sends the readings out, so they can be watched from a distance.</p>
+<div class="pipe">
+<div class="bx"><b>Sense</b>Temperature and humidity (DHT22), movement (PIR), light (LDR), smoke and flammable gas (MQ-2).</div>
+<div class="ar" aria-hidden="true">&rarr;</div>
+<div class="bx"><b>Decide</b>An Arduino Uno compares each reading with a set limit, every two seconds.</div>
+<div class="ar" aria-hidden="true">&rarr;</div>
+<div class="bx"><b>Act and show</b>Fan through a relay, light, buzzer, a 16&times;2 display, and Wi-Fi to send the data on.</div>
+</div>
+<div class="tw"><table class="t">
+<thead><tr><th>When</th><th>The system</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Temperature above 30 &deg;C, or humidity above 70 %</td><td>Turns the fan on</td><td>Comfort and air quality</td></tr>
+<tr><td>Gas level above 400</td><td>Sounds the buzzer and runs the fan to push the gas outside</td><td>Safety</td></tr>
+<tr><td>Movement detected and the room is dark (light level below 300)</td><td>Turns the light on</td><td>Light only when someone is there</td></tr>
+</tbody></table></div>
+<p class="m">The limits are starting values written into the code, ready to be tuned for each room.</p>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">03</div></div><div class="sb">
+<p class="kick">Why it matters</p>
+<h2>Less waste. Better rooms. Better decisions.</h2>
+<p>A smart campus is more than a showcase. Run at scale, the same logic is designed to deliver real benefits:</p>
+<div class="ben">
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>Lower energy use</b><span>Air conditioning, fans and lights run according to actual need, not all day.</span></div>
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19c2-4 5-7 9-9"/></svg><b>Lower costs and emissions</b><span>Less electricity means lower running costs and a smaller carbon footprint.</span></div>
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></svg><b>Healthier rooms</b><span>Better air quality and thermal comfort in classrooms and laboratories, where students learn.</span></div>
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg><b>Safer buildings</b><span>Gas is detected early, the alarm sounds and the fan clears the air.</span></div>
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><b>Data for decisions</b><span>Accurate readings help management plan energy use, maintenance and infrastructure.</span></div>
+<div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.2-.5-.5-2.2z"/></svg><b>Skills for graduates</b><span>Programming, electronics, networking and data analysis, learned by building the real thing.</span></div>
+</div>
+</div></li>
+
+<li class="st" id="proof"><div class="rail"><div class="node">04</div></div><div class="sb">
+<p class="kick">Built by hand</p>
+<h2>Every wall, wire and line of code is theirs.</h2>
+<p>The students made the whole model themselves: the acrylic building, the wiring, the electronics and the program. It is 42 cm wide, 50 cm deep and 30 cm high, with a lift-off roof so every part can be seen, serviced and reprogrammed.</p>
+<div class="bento">
+<figure class="h"><img src="img/hero.jpg" alt="The finished model from the front: a display on the facade and a fan in the doorway" width="1200" height="900" loading="lazy" decoding="async"><figcaption>The finished building: live display on the facade, fan in the doorway.</figcaption></figure>
+<figure class="t"><img src="img/front-side.jpg" alt="The model with its white lift-off roof over blue acrylic walls" width="800" height="1067" loading="lazy" decoding="async"><figcaption>Lift-off roof</figcaption></figure>
+<figure class="s"><img src="img/inside-1.jpg" alt="Control boards and wiring on the back wall of the open model" width="800" height="1067" loading="lazy" decoding="async"><figcaption>Control boards</figcaption></figure>
+<figure class="s"><img src="img/inside-2.jpg" alt="The LED strip, display and sensor bar inside the open model" width="800" height="1067" loading="lazy" decoding="async"><figcaption>LED strip and sensors</figcaption></figure>
+<figure class="s"><img src="img/inside-3.jpg" alt="The power box and USB link at the corner of the open model" width="800" height="1067" loading="lazy" decoding="async"><figcaption>Power and USB link</figcaption></figure>
+</div>
+
+<div class="vcard">
+<div class="vbox"><button class="vid" data-yt="qykqdZAzdi4" data-title="Smart Campus: the parts" style="background-image:url(img/poster-parts.jpg)" aria-label="Play video: unpacking the sensors, relay modules, transformer and wiring"><i></i><span>The parts &middot; 0:34</span></button></div>
+<div><p class="kick">Watch &middot; 0:34</p><h3>It starts as a pile of parts.</h3><p>Sensor boards, relay modules, a transformer and metres of wire. This is the moment the team unpacks everything that will become the building's eyes, brain and muscles.</p>
+<ul class="chips"><li>Sensors</li><li>Relays</li><li>Transformer</li><li>Wiring</li></ul></div>
+</div>
+
+<div class="vcard rev">
+<div class="vbox"><button class="vid" data-yt="vATsDEU8-2I" data-title="Smart Campus: powering up the room" style="background-image:url(img/poster-build.jpg)" aria-label="Play video: powering up the model, the LED strip and indicator lights come on"><i></i><span>Powering up the room &middot; 0:22</span></button></div>
+<div><p class="kick">Watch &middot; 0:22</p><h3>Then the building comes alive.</h3><p>The LED strip glows along the walls and the indicator lights switch on. A model made entirely by hand, powered up for the first time.</p>
+<ul class="chips"><li>LED strip</li><li>Indicator lights</li><li>Acrylic body</li></ul></div>
+</div>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">05</div></div><div class="sb">
+<p class="kick">The road ahead</p>
+<h2>From one model to a whole campus.</h2>
+<p>This project is the first step. The model proves the idea in miniature; the next steps take it into real buildings.</p>
+<div class="steps3">
+<div class="done"><em>Step 1 &middot; Done</em><b>The model campus</b><span>Five sensors, ventilation, lighting and safety control, a live display and Wi-Fi, built and wired by hand in an acrylic building.</span></div>
+<div><em>Step 2 &middot; Next</em><b>One real building</b><span>Install the system in a real campus building, tune the limits on site, and log the data to measure the energy saved.</span></div>
+<div><em>Step 3 &middot; Later</em><b>The whole campus</b><span>Many rooms on one network with a central dashboard, plus CO&#8322;, noise and water sensors and renewable energy.</span></div>
+</div>
+</div></li>
+
+</ol></main>
+
+<section class="support" id="support"><div class="w">
+<p class="eyebrow" style="color:#7fd4ca">Support this project</p>
+<h2>Help take it from the model to a real building.</h2>
+<p>Seven final-year students built this prototype under academic supervision. We are looking for partners who can help take it into a real campus building.</p>
+<ul class="asks">
+<li><b>A pilot building</b>A campus building or laboratory where the system can run and log data.</li>
+<li><b>Calibration</b>Reference instruments to check temperature, humidity, light and gas readings.</li>
+<li><b>Funding</b>For more sensors, a data dashboard and a multi-room network.</li>
+</ul>
+<div class="row"><a class="btn p" href="/#contact">Contact Dr. Ibrahim</a><a class="btn" href="/#projects">See other graduation projects</a></div>
+</div></section>
+
+<section class="proj-meta"><div class="w"><h2>Project details</h2>
+<dl>
+<div><dt>Title</dt><dd>Smart Campus Environmental Management System</dd></div>
+<div><dt>Code</dt><dd>GP-26-M-01 (graduation project, 2026, morning study, group 01)</dd></div>
+<div><dt>Academic year</dt><dd>2025/2026</dd></div>
+<div><dt>Status</dt><dd>Prototype built and powered up; first step toward a campus-wide system</dd></div>
+<div><dt>Supervisor</dt><dd>Dr. Ibrahim Ali Hameed Al-Najati</dd></div>
+<div><dt>Department</dt><dd>Electromechanical Systems Engineering Technology</dd></div>
+<div><dt>Institution</dt><dd>Missan Engineering Technical College, Southern Technical University, Iraq</dd></div>
+</dl></div></section>
+
+<footer>&copy; Dr. Ibrahim Ali Hameed Al-Najati · <a href="/" style="color:#c3cad6">dr-ibrahim-alnajati.github.io</a></footer>
+
+<script>
+document.querySelectorAll("button.vid").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-yt");if(!id)return;var f=document.createElement("iframe");f.className="vid";f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1";f.title=b.getAttribute("data-title");f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;b.replaceWith(f)})});
+</script>
+</body></html>
