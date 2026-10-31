@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remote Corrosion (GP-26-M-02) | Dr. Ibrahim Al-Najati</title>
+<meta name="description" content="Remote Corrosion: a graduation project that estimates the corrosion rate and remaining life of oil-pipeline steel and raises a warning before damage, tested in software simulation. Supervised by Dr. Ibrahim Al-Najati, Missan Engineering Technical College.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Ibrahim Al-Najati">
+<meta property="og:title" content="Remote Corrosion: an early-warning system for pipeline corrosion">
+<meta property="og:description" content="Sensor data in, corrosion rate, remaining life and risk alert out. A graduation project from Missan Engineering Technical College, Southern Technical University, Iraq.">
+<meta property="og:url" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/">
+<meta property="og:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Pipe Corrosion Analysis System dashboard showing a corrosion rate of 0.3792 mm/year, Moderate">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Remote Corrosion: an early-warning system for pipeline corrosion">
+<meta name="twitter:description" content="Sensor data in, corrosion rate, remaining life and risk alert out.">
+<meta name="twitter:image" content="https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/img/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Remote Corrosion Monitoring and Early Warning System","alternateName":"GP-26-M-02","description":"A final-year graduation project: a software system that estimates the corrosion rate and remaining life of oil-pipeline steel from sensor inputs and raises risk alerts, evaluated in a nine-case simulation study.","url":"https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/","image":"https://dr-ibrahim-alnajati.github.io/projects/gp-26-m-02/img/og.jpg","inLanguage":"en","contributor":{"@id":"https://dr-ibrahim-alnajati.github.io/#person"},"isPartOf":{"@type":"WebSite","name":"Dr. Ibrahim Al-Najati","url":"https://dr-ibrahim-alnajati.github.io/"}}</script>
+<style>
+:root{--bg:#fff;--bg2:#f6f7f9;--ink:#14213d;--mut:#5f6b7a;--line:#e4e7ec;--acc:#0f766e;--accbg:#e6f4f2;--r:14px;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+.w{max-width:1040px;margin-inline:auto;padding-inline:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .w::-webkit-scrollbar{display:none}
+nav b{white-space:nowrap;margin-inline-end:14px;font-weight:700}nav b a{color:var(--ink)}
+nav a{white-space:nowrap;color:var(--mut);font-size:.9rem;font-weight:500;padding:.3rem .7rem;border-radius:999px}
+nav a:hover{text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;border-radius:10px;padding:.6rem 1.1rem;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}.btn:hover{text-decoration:none;filter:brightness(.97)}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:0 0 10px}
+
+/* hero */
+.hero{padding-block:clamp(32px,7vw,72px) clamp(24px,4vw,40px)}
+.hero .w{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,48px);align-items:center}
+h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;font-weight:800;text-wrap:balance}
+.lead{font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--mut);max-width:30em;margin:0 0 22px}
+.lead b{color:var(--ink)}
+.hp{aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(20,33,61,.45)}
+.hp img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-block:8px clamp(32px,6vw,56px)}
+.stats div{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stats b{display:block;font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;color:var(--acc);letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats span{display:block;color:var(--mut);font-size:.85rem;line-height:1.35;margin-top:4px}
+
+/* story timeline */
+.story{list-style:none;margin:0;padding:0}
+.st{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 clamp(14px,3vw,28px)}
+.rail{position:relative}
+.rail::after{content:"";position:absolute;left:50%;top:52px;bottom:0;width:2px;transform:translateX(-50%);background:linear-gradient(var(--acc),var(--line))}
+.st:last-child .rail::after{display:none}
+.node{width:44px;height:44px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem;font-variant-numeric:tabular-nums;box-shadow:0 0 0 6px var(--accbg)}
+.sb{padding-bottom:clamp(44px,8vw,84px);min-width:0}
+.kick{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:10px 0 6px}
+.sb h2{font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.12;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.sb p{margin:0 0 14px;max-width:40em;color:#2b3a55}
+.sb p.m{color:var(--mut);font-size:.92rem}
+figure{margin:0}
+figcaption{font-size:.82rem;color:var(--mut);margin-top:6px;line-height:1.4}
+.fig img{border-radius:12px;border:1px solid var(--line);width:100%}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-block:18px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-block:18px}
+.g2 .fig img,.g3 .fig img{aspect-ratio:4/3;object-fit:cover}
+.wide{margin-block:18px}
+.with-v{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(18px,4vw,36px);align-items:center;margin-block:18px}
+.vid{position:relative;display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:16px;overflow:hidden;background:#0e1a33 center/cover no-repeat;cursor:pointer;padding:0;font:inherit;color:#fff;box-shadow:0 14px 34px -20px rgba(20,33,61,.6)}
+.vid::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,20,40,.7))}
+.vid i{position:absolute;left:50%;top:48%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center}
+.vid i::after{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--acc)}
+.vid span{position:absolute;left:14px;right:14px;bottom:12px;text-align:start;font-weight:600;font-size:.92rem;line-height:1.3}
+.vid:hover i{transform:scale(1.06)}
+iframe.vid{border:0}
+.vtxt h3{margin:0 0 6px;font-size:1.05rem}.vtxt p{font-size:.95rem}
+.pv{font-size:.76rem;color:#7a5b10;background:#fff7e6;border:1px solid #f3dfae;border-radius:8px;padding:6px 10px;margin-top:8px}
+
+/* chart */
+.chart{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:16px 14px 12px;margin-block:18px}
+.chart h3{margin:0 0 2px;font-size:1rem}.chart p.m{margin:0 0 8px}
+.lg{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:.82rem;font-weight:600;color:var(--acc)}
+.lg i{width:26px;border-top:2px dashed var(--acc)}
+.bc i,.bc em{font-style:normal}
+.bc .plot{position:relative;height:clamp(190px,40vw,250px);margin-left:38px}
+.bc .gl{position:absolute;left:0;right:0;height:0;border-top:1px solid var(--line)}
+.bc .gl b{position:absolute;right:calc(100% + 8px);top:-.7em;font-size:.78rem;font-weight:500;color:var(--mut);white-space:nowrap}
+.bc .th{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--acc);z-index:2}
+.bc .cols{position:absolute;inset:0;display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px)}
+.bc .c{flex:1;display:flex;align-items:flex-end;justify-content:center;min-width:0}
+.bc em{display:block;position:relative;width:min(96px,100%);background:var(--acc);border-radius:6px 6px 0 0}
+.bc em.lo{background:#5eaaa3}
+.bc em b{z-index:3;background:var(--bg2);border-radius:4px;padding-inline:4px;position:absolute;left:50%;bottom:100%;transform:translateX(-50%);padding-bottom:4px;font-size:clamp(.95rem,3.4vw,1.25rem);font-weight:800;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bc .xl{display:flex;gap:clamp(10px,4vw,48px);padding-inline:clamp(8px,3vw,32px);margin:8px 0 0 38px}
+.bc .xl span{flex:1;text-align:center;font-size:.85rem;color:var(--mut)}
+.facts2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:18px}
+.facts2 div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.facts2.col{grid-template-columns:1fr;margin-block:0}.facts2 b{display:block;font-size:1.02rem}.facts2 span{display:block;color:var(--mut);font-size:.88rem;line-height:1.45;margin-top:2px}
+
+/* product */
+.uses{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px;max-width:40em}
+.uses li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:500;color:#2b3a55}
+.road{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:8px}
+.road div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.road div.done{border-color:var(--acc);background:var(--accbg)}
+.road em{font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.road .done em{color:var(--acc)}
+.road b{display:block;margin:4px 0 2px}.road span{display:block;font-size:.88rem;color:var(--mut);line-height:1.45}
+
+/* support */
+.support{background:var(--ink);color:#fff;padding-block:clamp(44px,8vw,80px)}
+.support h2{font-size:clamp(1.7rem,4.5vw,2.7rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.support p{color:#c3cad6;max-width:38em;margin:0 0 18px}
+.asks{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.asks li{border:1px solid #3c4a66;border-radius:var(--r);padding:14px 16px;color:#e8ecf3}
+.asks b{display:block;color:#fff;margin-bottom:2px}
+.support .btn{background:transparent;border-color:#3c4a66;color:#fff}.support .btn.p{background:#fff;border-color:#fff;color:var(--ink)}
+
+.proj-meta{padding-block:clamp(28px,5vw,44px)}
+.proj-meta h2{font-size:1.1rem;margin:0 0 12px}
+.proj-meta dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 24px;margin:0}
+.proj-meta dt{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.proj-meta dd{margin:0 0 6px;font-weight:500}
+footer{background:var(--ink);color:#8b97ab;font-size:.82rem;padding-block:20px;text-align:center;border-top:1px solid #243252}
+
+@media(max-width:760px){
+.hero .w{grid-template-columns:1fr}.hp{max-width:340px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.st{grid-template-columns:36px minmax(0,1fr)}.node{width:34px;height:34px;font-size:.8rem;box-shadow:0 0 0 4px var(--accbg)}.rail::after{top:42px}
+.g2,.g3{grid-template-columns:1fr 1fr}.g3 .fig:last-child{grid-column:1/-1}
+.with-v{grid-template-columns:1fr}.with-v .vbox{max-width:260px}
+.facts2,.road,.asks{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.vid:hover i{transform:none}}
+
+.hp.land{aspect-ratio:1200/949;background:#0f1b33}
+.hp.land img{object-fit:contain}
+.eq{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:6px 0 16px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(.86rem,2.6vw,1rem);overflow-x:auto;color:var(--ink)}
+.eq small{display:block;margin-top:6px;color:var(--mut);font-family:Inter,system-ui,sans-serif;font-size:.82rem}
+.sev{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-block:12px 18px}
+.sev div{border-radius:10px;padding:10px 8px;text-align:center;font-size:.8rem;line-height:1.3;border:1px solid var(--line);background:#fff}
+.sev b{display:block;font-size:.9rem}
+.sev .s1{border-top:4px solid #2ecc71}.sev .s2{border-top:4px solid #27ae60}.sev .s3{border-top:4px solid #f39c12}.sev .s4{border-top:4px solid #e67e22}.sev .s5{border-top:4px solid #e74c3c}
+.tw{overflow-x:auto;margin-block:14px;border:1px solid var(--line);border-radius:12px}
+table.t{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem;font-variant-numeric:tabular-nums}
+table.t th,table.t td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th{background:var(--bg2);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+table.t tr:last-child td{border-bottom:0}
+.chip{display:inline-block;border-radius:999px;padding:1px 10px;font-size:.8rem;font-weight:600;color:#fff}
+.chip.vl{background:#2ecc71;color:#10391f}.chip.l{background:#27ae60}.chip.m{background:#f39c12;color:#3d2800}.chip.h{background:#e74c3c}
+.sim{font-size:.82rem;color:#7a5b10;background:#fff7e6;border:1px solid #f3dfae;border-radius:10px;padding:9px 12px;margin:14px 0;max-width:44em}
+@media(max-width:760px){.sev{grid-template-columns:repeat(2,minmax(0,1fr))}.sev div:last-child{grid-column:1/-1}}
+</style></head><body>
+<nav><div class="w"><b><a href="/">Dr. Ibrahim Al-Najati</a></b><a href="/#projects">&larr; All projects</a><a href="#proof">Results</a><a href="#support">Support</a><a href="/#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="w">
+<div>
+<p class="eyebrow">GP-26-M-02 · Graduation project · 2026</p>
+<h1>Remote Corrosion</h1>
+<p class="lead"><b>See corrosion before it becomes a leak.</b> A monitoring and early-warning system that turns pipeline sensor data into a corrosion rate, a remaining-life estimate and a risk alert.</p>
+<div class="row"><a class="btn p" href="#proof">See the results</a><a class="btn" href="#support">Support this project</a></div>
+</div>
+<div class="hp land"><img src="img/dash-x65.jpg" alt="The Pipe Corrosion Analysis System dashboard: corrosion rate 0.3792 mm/year, status Moderate, estimated pipe life 13.2 years, with an inspection history panel" width="1200" height="949" fetchpriority="high" decoding="async"></div>
+</div></header>
+
+<div class="w"><div class="stats" aria-label="Key figures">
+<div><b>9</b><span>simulated cases: 3 temperatures, 3 materials</span></div>
+<div><b>0.3872</b><span>mm/year, Moderate: X52 steel at 40 &deg;C</span></div>
+<div><b>12.9 yr</b><span>estimated remaining life in that case</span></div>
+<div><b>11&times;</b><span>faster corrosion at 90 &deg;C than at 20 &deg;C (X52)</span></div>
+</div></div>
+
+<main class="w"><ol class="story">
+
+<li class="st"><div class="rail"><div class="node">01</div></div><div class="sb">
+<p class="kick">The problem</p>
+<h2>Pipelines fail from the inside.</h2>
+<p>Corrosion eats pipe walls where nobody can see it. Pitting is the worst form: small, deep pits that can end in a sudden leak.</p>
+<p>Manual inspection is slow and costly, and long pipeline networks make it harder still. By the time damage is found, the repair is expensive and the environment may already be contaminated.</p>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">02</div></div><div class="sb">
+<p class="kick">The idea</p>
+<h2>Measure. Predict. Warn.</h2>
+<p>The system is built in three layers. Sensors read the pipe's conditions, a PLC passes the readings on, and software turns them into a corrosion rate, a remaining-life estimate and a risk level.</p>
+<div class="facts2">
+<div><b>Physical layer</b><span>Smart corrosion coupons made from the pipe's own steel grades (API 5L X52 and X65), measured by electrical resistance (ER) and linear polarization resistance (LPR), plus temperature, pressure, flow, humidity and pH sensors.</span></div>
+<div><b>Control layer</b><span>A PLC reads and conditions the signals and sends them to the computer over Modbus TCP/IP.</span></div>
+<div><b>Analysis layer</b><span>Python software calculates the corrosion rate and remaining life, classifies the risk and shows trends on a dashboard.</span></div>
+</div>
+<p><b>Grounded in the field.</b> Before building it, the team visited the inspection department of Missan Oil Company on an official visit arranged by the college, to learn how pipe corrosion is measured today and what challenges engineers face on site. The software's input structure follows the monitoring workflow of PetroChina (Maysan Operations), the operator contracted with Missan Oil Company.</p>
+<p class="sim">The sensor and PLC layers are the system design. The results on this page come from the software, tested with simulated inputs.</p>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">03</div></div><div class="sb">
+<p class="kick">The method</p>
+<h2>From sensor values to a risk level.</h2>
+<p>The software starts from the de Waard&ndash;Milliams equation for CO&#8322; corrosion of carbon steel, then adjusts the result for temperature, flow, pH, humidity, pressure and the pipe material.</p>
+<div class="eq">log<sub>10</sub>(V) = 5.8 &minus; 1710 / T + 0.67 &middot; log<sub>10</sub>(p<sub>CO2</sub>)<small>V: corrosion rate (mm/year) &middot; T: temperature (K) &middot; p<sub>CO2</sub>: CO&#8322; partial pressure (bar)</small></div>
+<p>The final rate is placed in one of five risk bands. The dashboard changes colour and shows a recommendation as the rate rises.</p>
+<div class="sev" role="list" aria-label="Risk bands in mm per year">
+<div class="s1" role="listitem"><b>Very low</b>up to 0.025</div>
+<div class="s2" role="listitem"><b>Low</b>up to 0.125</div>
+<div class="s3" role="listitem"><b>Moderate</b>up to 0.5</div>
+<div class="s4" role="listitem"><b>High</b>up to 1.0</div>
+<div class="s5" role="listitem"><b>Very high</b>above 1.0</div>
+</div>
+<figure class="fig wide" style="max-width:640px"><img src="img/flow.jpg" alt="Flowchart: launch the app, connect to the PLC over Modbus TCP/IP, read the holding registers, scale the data, apply the corrosion models, calculate the rate and remaining life, update the dashboard, and raise an alarm if the rate passes the safety threshold" width="1000" height="1226" loading="lazy" decoding="async"><figcaption>The program loop: connect to the PLC, read the registers, apply the models, update the dashboard and raise an alarm when the rate passes the safety threshold.</figcaption></figure>
+</div></li>
+
+<li class="st" id="proof"><div class="rail"><div class="node">04</div></div><div class="sb">
+<p class="kick">The results</p>
+<h2>Nine scenarios. One dashboard.</h2>
+<p>The team ran the software through nine cases: carbon steel X52, carbon steel X65 and the nickel alloy Inconel 625, each at 20, 40 and 90 &deg;C, with 0.2 % CO&#8322;.</p>
+<p class="sim">These are simulation results from the team's own software. They have not yet been compared with laboratory or field corrosion measurements.</p>
+
+<figure class="fig wide"><img src="img/charts-x65.jpg" alt="Six analysis charts for X65 steel at 40 degrees Celsius: corrosion against temperature, CO2 content, relative humidity, pipe material and flow velocity, and the inspection history trend" width="1200" height="1077" loading="lazy" decoding="async"><figcaption>The analysis window for X65 steel at 40 &deg;C: corrosion against temperature, CO&#8322; content, humidity, pipe material and flow velocity, plus the inspection history.</figcaption></figure>
+
+<div class="chart" role="group" aria-label="Chart of corrosion rate for X52 steel at 20, 40 and 90 degrees Celsius">
+<h3>Heat is the main driver</h3>
+<p class="m">Corrosion rate of X52 carbon steel in the simulation, 0.2 % CO&#8322;.</p>
+<p class="lg"><i></i>0.5 mm/year: upper limit of &ldquo;Moderate&rdquo;</p>
+<div class="bc" role="img" aria-label="Bar chart: 20 degrees gives 0.0975 millimetres per year, 40 degrees gives 0.3872, 90 degrees gives 1.1184. A dashed line marks 0.5 millimetres per year.">
+<div class="plot">
+<i class="gl" style="bottom:0"><b>0</b></i><i class="gl" style="bottom:33.33%"><b>0.4</b></i><i class="gl" style="bottom:66.67%"><b>0.8</b></i><i class="gl" style="bottom:100%"><b>1.2</b></i>
+<i class="th" style="bottom:41.67%"></i>
+<div class="cols"><div class="c"><em class="lo" style="height:8.13%"><b>0.0975</b></em></div><div class="c"><em class="lo" style="height:32.27%"><b>0.3872</b></em></div><div class="c"><em style="height:93.2%"><b>1.1184</b></em></div></div>
+</div>
+<div class="xl"><span>20 &deg;C</span><span>40 &deg;C</span><span>90 &deg;C</span></div>
+</div>
+</div>
+
+<div class="tw"><table class="t">
+<thead><tr><th>Case</th><th>Material</th><th>Temp.</th><th>Rate (mm/year)</th><th>Est. life (years)</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Carbon steel X52</td><td>20 &deg;C</td><td>0.0975</td><td>51.3</td><td><span class="chip l">Low</span></td></tr>
+<tr><td>2</td><td>Carbon steel X52</td><td>40 &deg;C</td><td>0.3872</td><td>12.9</td><td><span class="chip m">Moderate</span></td></tr>
+<tr><td>3</td><td>Carbon steel X52</td><td>90 &deg;C</td><td>1.1184</td><td>4.2</td><td><span class="chip h">Very high</span></td></tr>
+<tr><td>4</td><td>Carbon steel X65</td><td>20 &deg;C</td><td>0.0955</td><td>52.4</td><td><span class="chip l">Low</span></td></tr>
+<tr><td>5</td><td>Carbon steel X65</td><td>40 &deg;C</td><td>0.3792</td><td>13.2</td><td><span class="chip m">Moderate</span></td></tr>
+<tr><td>6</td><td>Carbon steel X65</td><td>90 &deg;C</td><td>1.0953</td><td>4.6</td><td><span class="chip h">Very high</span></td></tr>
+<tr><td>7</td><td>Inconel 625</td><td>20 &deg;C</td><td>0.0001</td><td>&gt; 500</td><td><span class="chip vl">Very low</span></td></tr>
+<tr><td>8</td><td>Inconel 625</td><td>40 &deg;C</td><td>0.0002</td><td>&gt; 500</td><td><span class="chip vl">Very low</span></td></tr>
+<tr><td>9</td><td>Inconel 625</td><td>90 &deg;C</td><td>0.0006</td><td>&gt; 500</td><td><span class="chip vl">Very low</span></td></tr>
+</tbody></table></div>
+
+<figure class="fig wide"><img src="img/dash-inconel.jpg" alt="The dashboard for Inconel 625 at 40 degrees Celsius: corrosion rate 0.0002 millimetres per year, status Very Low, estimated pipe life above 500 years" width="1200" height="681" loading="lazy" decoding="async"><figcaption>The same dashboard for Inconel 625 at 40 &deg;C: 0.0002 mm/year, &ldquo;Very low&rdquo;.</figcaption></figure>
+
+<div class="facts2">
+<div><b>Temperature beats steel grade</b><span>Moving from X52 to X65 at 40 &deg;C changed the rate by about 2 % (0.3872 to 0.3792 mm/year). Going from 20 to 90 &deg;C changed it about eleven-fold.</span></div>
+<div><b>Advice, not just numbers</b><span>A rule-based expert engine reads the risk band, the pH and the inhibitor setting, then writes plain advice. At 0.3792 mm/year it says &ldquo;Monthly periodic monitoring&rdquo; and &ldquo;Use strong corrosion inhibitors&rdquo; for the acidic pH.</span></div>
+<div><b>Alloys are a model input</b><span>Inconel 625 comes out near zero because the model gives it a material factor of 0.01 (X65: 0.95). Real behaviour needs laboratory validation.</span></div>
+</div>
+</div></li>
+
+<li class="st"><div class="rail"><div class="node">05</div></div><div class="sb">
+<p class="kick">From project to product</p>
+<h2>Where this could work.</h2>
+<ul class="uses">
+<li>Oil and gas pipelines and flowlines</li>
+<li>Water-supply and chemical-plant piping</li>
+<li>Maintenance planning from corrosion trends instead of fixed schedules</li>
+</ul>
+<p class="m" style="margin-top:20px">Where the project stands, and what comes next:</p>
+<div class="road">
+<div class="done"><em>Done</em><b>Software prototype</b><span>Corrosion model, dashboard, charts, history log and a nine-case simulation study.</span></div>
+<div><em>Next</em><b>Test bench</b><span>Corrosion coupons, sensors and a PLC wired to the software and checked against laboratory measurements.</span></div>
+<div><em>Later</em><b>Field pilot</b><span>A trial on a real pipeline with long-term data, to check and tune the model.</span></div>
+</div>
+</div></li>
+
+</ol></main>
+
+<section class="support" id="support"><div class="w">
+<p class="eyebrow" style="color:#7fd4ca">Support this project</p>
+<h2>Help take it from simulation to the pipeline.</h2>
+<p>This prototype was built by final-year students under academic supervision. We are looking for partners who can help test it against real corrosion data.</p>
+<ul class="asks">
+<li><b>A test partner</b>A laboratory or operator able to share coupon and process data for validation.</li>
+<li><b>Expert review</b>Corrosion engineers to review the model, correction factors and risk limits.</li>
+<li><b>Funding</b>For coupons, sensors and a PLC test bench.</li>
+</ul>
+<div class="row"><a class="btn p" href="/#contact">Contact Dr. Ibrahim</a><a class="btn" href="/#projects">See other graduation projects</a></div>
+</div></section>
+
+<section class="proj-meta"><div class="w"><h2>Project details</h2>
+<dl>
+<div><dt>Title</dt><dd>Remote Corrosion Monitoring and Early Warning System</dd></div>
+<div><dt>Code</dt><dd>GP-26-M-02 (graduation project, 2026, morning study, group 02)</dd></div>
+<div><dt>Academic year</dt><dd>2025/2026</dd></div>
+<div><dt>Status</dt><dd>Software prototype, tested in simulation</dd></div>
+<div><dt>Supervisor</dt><dd>Dr. Ibrahim Ali Hameed Al-Najati</dd></div>
+<div><dt>Department</dt><dd>Electromechanical Systems Engineering Technology</dd></div>
+<div><dt>Institution</dt><dd>Missan Engineering Technical College, Southern Technical University, Iraq</dd></div>
+</dl></div></section>
+
+<footer>&copy; Dr. Ibrahim Ali Hameed Al-Najati · <a href="/" style="color:#c3cad6">dr-ibrahim-alnajati.github.io</a></footer>
+</body></html>
